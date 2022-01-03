@@ -172,3 +172,20 @@ button {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
+/*Scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #171824; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary); 
+}
