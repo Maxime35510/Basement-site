@@ -19,7 +19,13 @@ It may not be complex, and may have some floating functions.
   --discord: #5865F2;
 }
 
-a {c}
+h1, h2, h3, h4 {
+  color: var(--text) !important;
+}
+
+a {
+  color: var(--text) !important;
+}
 
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
