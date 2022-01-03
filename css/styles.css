@@ -13,11 +13,13 @@ It may not be complex, and may have some floating functions.
 
 /* Our default values set as CSS variables */
 :root {
-  --background: #F9F7F5;
-  --text: #000000;
-  --primary: #894EFF;
+  --background: #131420;
+  --text: #ffffff;
+  --primary: #016bf6;
   --discord: #5865F2;
 }
+
+a {c}
 
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
@@ -96,7 +98,7 @@ button {
   width: 130px;
   height: 40px;
   padding: 10px 25px;
-  border: 2px solid #000;
+  border: 2px solid var(--text);
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -121,7 +123,7 @@ button {
   left: 0;
   width: 30px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--text);
   animation: shine 3s ease-in-out infinite;
 }
 .btn-1:active {
