@@ -1,0 +1,96 @@
+      .card button:hover {
+        background-color: var(--primary);
+        color: white !important;
+      }
+
+      .card a.badge {
+        font-size: 12px;
+        font-weight: bold !important;
+        background-color: var(--primary);
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+      }
+      
+      .card a {
+        opacity: 85%;
+      }
+
+      .wrapper .content h1 {
+        margin-bottom: 10px !important;
+      }
+
+      .card {
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: white;
+        color: black;
+        width: 86%;
+        border-radius: 10px;
+        padding: 20px;
+        padding-left: 50px;
+      }
+
+      iframe {
+        overflow: hidden !important;
+      }
+
+@media screen and (max-width: 800px) {
+  .badge {
+    word-break: break-all !important;
+    font-size: 62% !Important;
+  }
+
+  .card {
+    width: 70%;
+  }
+}
+
+.title {
+  margin-left: 5%;
+}
+.name, .title h1 {
+  margin-bottom: 0px !important;
+}
+
+/*staff cards*/
+
+  .staff-card {
+    margin-top: 2%;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+.avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+}
+
+.card-image {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.card-image .caption, .card-image figcaption {
+  padding-left: 15px;
+}
+
+html.wf-active .card-image .card-title {
+  font-size: 16px;
+}
+
+.card-image .card-title {
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 2px;
+}

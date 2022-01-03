@@ -1,0 +1,166 @@
+/******************************************************************************
+CSS
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and more.
+It may not be complex, and may have some floating functions.
+******************************************************************************/
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --background: #F9F7F5;
+  --text: #000000;
+  --primary: #894EFF;
+  --discord: #5865F2;
+}
+
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
+
+/*styling*/
+
+.body {
+  background-color: var(--primary);
+  background-size: 100% !important;
+}
+
+/* Basic page styling */
+
+html {
+    overflow-y: scroll !important;
+    scroll-behavior: smooth;
+}
+
+body,
+html,
+iframe,
+#body, #footer {
+  transition: opacity 1s;
+}
+
+iframe {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: var(--background);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 0%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*button*/
+button {
+  margin-top: 0px;
+  margin: 10px;
+  outline: none;
+}
+
+.cbtn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-1 {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn-1:hover {
+  background: white;
+  color: var(--primary) !important;
+}
+.btn-1:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shine 3s ease-in-out infinite;
+}
+.btn-1:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes shine {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.btn-2 {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn-2:hover {
+  background: white;
+  color: var(--primary) !important;
+}
+.btn-2:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}

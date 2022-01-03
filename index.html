@@ -1,101 +1,360 @@
 <!DOCTYPE html>
+<!-- Welcome to the Basement Network source code, we hope you find what you're searching. -->
 <html lang="en">
   <head>
     <!--
       This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
     -->
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>Hello World!</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/attachments/922197630543618179/922197908839858226/basement_network.png"
+    />
+    <title>Basement Network</title>
+    <!-- fonts we use -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Meta tags we use for SEO and social sharing -->
+    <link rel="canonical" href="./index.html" />
     <meta
       name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="Basement Network is creating awesome communities around different social medias, join our website to know more about us."
     />
+    <meta name="theme-color" content="#894EFF" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
+    <meta property="og:title" content="Basement Network" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta property="og:url" content="./index.html" />
     <meta
       property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="Basement Network is the official website of our social group."
     />
     <meta
       property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+      content="https://cdn.discordapp.com/attachments/922197630543618179/922197879840440350/large_basement_network.png"
     />
     <meta name="twitter:card" content="summary" />
-
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/cards.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+
+    <script src="/js/script.js" defer></script>
   </head>
   <body>
-    <!--
+    <iframe
+      id="l_frame"
+      src="loader.html"
+      style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:5;"
+      name="l_frame"
+      >Loading page...</iframe
+    >
+    <div id="body" style="opacity:0">
+    <div class="body">
+      <!--
       This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
       Each element is defined using tags, with < and > indicating where each one opens and closes
       There are elements for sections of the page, images, text, and more
       The elements include attributes referenced in the CSS for the page style
     -->
-
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
-
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <!-- Instructions on using this project -->
-        <div class="instructions">
-          <h2>
-            Using this project
-          </h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out README.md in the editor for
-            more info and next steps you can take!
-          </p>
-          <!-- ADD BUTTON HERE -->
-          
-          <!-- Once you've added the button from the readme, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+      <!-- The wrapper and content divs set margins and positioning -->
+      <div class="wrapper">
+        <div class="content" role="main">
+          <!-- This is the start of content for our page -->
+          <h1>
+            <a
+              style="color: white;"
+              id="title"
+              class="typewrite"
+              data-period="2000"
+              data-type='[ "Basement Network.", "We build it.", "We make it better.", "We make it real." ]'
+            ></a>
+          </h1>
+        </div>
+        <a style="color: white" class="center"
+          >Basement Network is a group focused on creating, partnering and
+          supporting communities in social medias.</a
+        >
+        <div class="content">
+          <a href="#explore"><button class="cbtn btn-2" style="border-color: white; color: white;">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+          </button></a>
+          <a href="./partners.html"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            Partners
+          </button></a>
         </div>
       </div>
     </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
+    <!--down below, you can see the cards-->
+<div class="title">
+      <h1 id="explore">Our servers</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+</div>
+    <div class="card">
+      <a class="badge"
+        ><i class="fa-solid fa-circle-check"></i> official Basement server</a
+      >      <a class="badge" style="background-color: #5865F2;"
+        ><i class="fa-brands fa-discord"></i> Discord</a
       >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
+      <h1 class="name">Basement Developers</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+      <a
+        >Basement Developers is a server focused in programming, we share codes,
+        support others developers...</a
+      ><br />
+      <a>Healthy friendly community with +5000 members.</a
+      ><br />
+      <a href="https://discord.gg/z6rAfngx3e"><button
+        id="hover"
+        class="cbtn btn-1"
+        style="border-color: var(--primary); color: var(--primary);"
+      >
+        Join now
+        </button></a>
+    </div>
+
+    <div class="card">
+      <a class="badge"
+        ><i class="fa-solid fa-circle-check"></i> official Basement server</a
+      >      <a class="badge" style="background-color: #5865F2;"
+        ><i class="fa-brands fa-discord"></i> Discord</a
+      >
+      <h1 class="name">Basement Bots Lab</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+      <a
+        >Basement Bots Lab is a server focused in bot testing, you can add your
+        own bot and test it in public or private channels.</a
+      ><br />
+      <a>You can also get suggestions and inspiration from +1500 developers.</a
+      ><br />
+      <a href="https://discord.gg/QHgGqZjRWY"><button
+        id="hover"
+        class="cbtn btn-1"
+        style="border-color: var(--primary); color: var(--primary);"
+      >
+        Join now
+        </button></a>
+    </div>
+      
+          <div class="card">
+      <a class="badge"
+        ><i class="fa-solid fa-circle-check"></i> official Basement server</a
+      >      <a class="badge" style="background-color: #5865F2;"
+        ><i class="fa-brands fa-discord"></i> Discord</a
+      >
+      <h1 class="name">Basement Network</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+      <a
+        >The townhall of the Basement servers, the place where you can hang out, or become a part of us.</a
+      ><br />
+      <a>Safe community, and the place where everything starts.</a
+      ><br />
+      <a href="https://discord.gg/uSn4AdfgN5"><button
+        id="hover"
+        class="cbtn btn-1"
+        style="border-color: var(--primary); color: var(--primary);"
+      >
+        Join now
+        </button></a>
+    </div>
+    <!--end cards-->
+<!--about-->
+
+<div class="about" id="about">
+<h2 style="margin-bottom: 0px !important;">About us</h2><hr style="width: 20%;">
+<a>We are Basement Network, a group that creates and help communities in social medias.</a>
+<a>Why we do it? well, we want to give an opportunity to whoever wants to create their own original community.</a>
+<a>If you ever tried to create a community, you must know how hard it can be;</a>
+<a>Getting the staff, the server design, the promotion to grow the community...</a>
+<a>We want to simplify these things for everyone who wants to make original communities.</a>
+</div>
+
+<div class="flex-container">
+  <div>
+    <h2 style="margin-bottom: 0">
+      Design
+    </h2><hr style="width: 50%;">
+    <a>
+    We have a long template list for any kind of community you want! just pick the one you most like and start building.
+    </a>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 0">
+      Staff
+    </h2><hr style="width: 50%;">
+    <a>
+    We have a lot of voluntary trusted staffs that may be interested on being part of your awesome community! 
+    </a>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 0">
+      Promotion
+    </h2><hr style="width: 50%;">
+    <a>
+    We will take care of the promotion, you will be on our site as a Partner, and in our others servers!
+    </a>
+  </div>  
+</div>
+<div class="flex-container">
+  <div>
+    <h2 style="margin-bottom: 0">
+      Website
+    </h2><hr style="width: 50%;">
+    <a>
+    You don't need to worry about web development! we will host a website for you in one of our amazing sub-domains (server.basement-network.com)
+    </a>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 0">
+      Custom bots
+    </h2><hr style="width: 50%;">
+    <a>
+    If your community gets bigger, you will need more than other people's bots, what about a custom one?  
+    </a>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 0">
+      Programs
+    </h2><hr style="width: 50%;">
+    <a>
+    Periodically, we do special programs and events, you can participate in these programs to grow side-by-side with our others partners.
+    </a>
+  </div>  
+</div>
+      
+<div class="about">
+<h2 style="margin-bottom: 0px !important;">What's the trick?</h2><hr style="width: 20%;">
+<a>Now you must be asking yourself, what's the trick? do I need to sell my soul? do I need to pay something?</a>
+<a>And then we suddenly answer, "no!" everything is free, and you must be thinking *Impossible!*</a>
+<a>Well, ain't lying, we won't ask you for a single penny, at least not a non-optional one-.</a>
+<a>Jokes aside, we pay all we need to maintain the website with the ad revenue of our sites, and optional users donations.</a>
+<a>So yes, it's free for you, there's no trick in our purposes, we want to make communities around the world;</a>
+<a>For the users, for you, for everyone.</a>
+      <a href="https://discord.gg/uSn4AdfgN5"><button
+        id="hover"
+        class="cbtn btn-1"
+        style="border-color: var(--primary); color: var(--primary);"
+      >
+        So, join us!
+        </button></a>
+  </div>
+<!--end about-->
+      
+  </div> <!--body div-->
+  
+<style>
+ .about #hover:hover {
+   background-color: var(--primary) !important;
+   color: white !important;
+  }
+  
+  .flex-container {
+  display: flex;
+  width: 60%;
+  margin-left: 5%;
+  margin: auto;
+}
+
+.flex-container > div {
+  background-color: var(--primary);
+  border-radius: 10px;
+  margin: 2%;
+  padding: 30px;
+  width: 50%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+  
+@media (max-width: 600px) {
+.flex-container > div {
+width: 76% !important;
+}
+.flex-container {
+  display: initial !important;
+}  
+}    
+  
+  .about {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  }
+  
+  button {
+      margin-left: 0px !important;
+  }
+</style>
+  
   </body>
+<!--footer-->
+<footer class="footer-distributed" id="footer" style="opacity:0">
+
+			<div class="footer-right">
+
+				<a href="https://discord.gg/uSn4AdfgN5"><i class="fa-brands fa-discord"></i></a>
+				<a href="./contact.html"><i class="fa-solid fa-envelope"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="./index.html">Home</a>
+          <a href="./index.html#about">About</a>
+
+					<a href="./privacy.html">Policy</a>
+				</p>
+
+				<p>Basement Network &copy; 2021</p>
+			</div>
+
+		</footer>
+<!--end footer-->
+  
 </html>
