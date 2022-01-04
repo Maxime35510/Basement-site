@@ -176,6 +176,13 @@ $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fai
       
   </div> <!--body div-->
   
+<script>
+const codex = document.getElementById('codex').value;
+const highlight = codex.replaceAll("[" , "<span style='color: red !important;'>[</span>");
+document.getElementById('codex').innerHTML = highlight;
+</script>
+
+  
 <style>
   .codex {
     width: 100%;
