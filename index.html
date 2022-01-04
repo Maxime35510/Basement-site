@@ -53,7 +53,8 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-
+    <script src="https://api.countapi.xyz/get/dev.basement-network.com-timeout/visits?callback=timeoutviews" async></script>
+<script src="https://api.countapi.xyz/get/dev.basement-network.com-ticketsystem/visits?callback=ticketviews" async></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
   </head>
   <body>
@@ -114,6 +115,8 @@
         ><i class="fa-solid fa-code"></i> BDFD</a
       >      <a class="badge"
         ><i class="fa-brands fa-discord"></i> Berk#3506</a
+      > <a class="badge"
+        ><i class="fa-solid fa-eye"></i> <span id="ticketviews">0</span></a
       >
       <h1 class="name">Ticket System</h1>
       <hr
@@ -138,6 +141,8 @@
         ><i class="fa-solid fa-code"></i> BDFD</a
       >      <a class="badge"
         ><i class="fa-brands fa-discord"></i> Berk#3506</a
+      > <a class="badge"
+        ><i class="fa-solid fa-eye"></i> <span id="timeoutviews">0</span></a
       >
       <h1 class="name">Timeout System</h1>
       <hr
@@ -162,6 +167,15 @@
     <!--end cards-->
       
   </div> <!--body div-->
+  
+<script>
+function timeoutviews(response) {
+    document.getElementById('timeoutviews').innerText = response.value;
+}  
+function ticketviews(response) {
+    document.getElementById('ticketviews').innerText = response.value;
+}  
+</script>
   
 <style>
  .about #hover:hover {
@@ -249,7 +263,7 @@ width: 76% !important;
 					<a href="./privacy.html">Policy</a>
 				</p>
 
-				<p>Basement Network &copy; 2021</p>
+				<p>Basement Network &copy; 2022</p>
 			</div>
 
 		</footer>
