@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-
+<script src="/js/clipboard.js" defer></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
   </head>
   <body style="background-color: var(--background) !important">
@@ -75,7 +75,9 @@
     <div class="card">
       <a class="badge"
         ><i class="fa-solid fa-code"></i> BDFD</a
-      >      <a class="badge"
+      >       <a class="badge"
+        ><i class="fa-solid fa-code-branch"></i> V.1</a
+      >  <a class="badge"
         ><i class="fa-brands fa-discord"></i> Berk#3506</a
       >
       <h1 class="name">Timeout System Code</h1>
@@ -173,6 +175,7 @@ $timeout[$message[2];$message[1]]
 :x: $var[error] | Please mention someone or type a valid user ID.
            $endif 
 $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
+$c[Code from https://dev.basement-network.com - made by Berk#3506]
   </a>
           <a onclick="copy(timeout); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
@@ -218,10 +221,9 @@ const highlight = codex
 .replaceAll("$discriminator", "<span style='color: #feca29;'>$discriminator</span>")
 
 document.getElementById('codex').innerHTML = highlight;
-  
+
 function copy(txt){
-const copyText = "hello";
-navigator.clipboard.writeText(copyText.value);
+navigator.clipboard.writeText(code);
   setTimeout(function() { opacity(); }, 0);
 }
 
@@ -247,7 +249,7 @@ var timeout = `hi`;
 .alert-success {
     color: #ffffff;
     opacity: 0%;
-    background-color: var(--color-primary); /*#7DDF7C*/
+    background-color: var(--primary); 
     font-family: 'Source Sans Pro', sans-serif;
     border-radius:.5em;
     margin: 15px;
