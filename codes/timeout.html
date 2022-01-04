@@ -177,9 +177,13 @@ $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fai
   </div> <!--body div-->
   
 <script>
-const codex = document.getElementById('codex').value;
-const highlight = codex.replaceAll("[" , "<span style='color: red !important;'>[</span>");
-document.getElementById('codex').innerHTML = highlight;
+var word = document.getElementById('codex'),
+letters = word.innerHTML.split(''),
+spanified;
+for (var i = 0, j = letters.length; i < j; i++) {
+  spanified += '<span class="sillystylename">' + letters[i] + '</span>';
+}
+word.innerHTML = spanified;
 </script>
 
   
