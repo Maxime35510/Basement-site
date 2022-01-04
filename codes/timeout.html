@@ -64,8 +64,13 @@
       name="l_frame"
       >Loading page...</iframe
     >
+    
+<div class="alert-success" id="alert">
+<i class="fa fa-check-circle" aria-hidden="true"></i>
+  Successfully copied
+</div>
+    
     <div id="body" style="opacity:0">
-
       
     <div class="card">
       <a class="badge"
@@ -169,7 +174,7 @@ $timeout[$message[2];$message[1]]
            $endif 
 $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
   </a>
-          <a href="https://dsc.gg/codes"><button class="cbtn btn-1" style="border-color: white; color: white;">
+          <a onclick="copy(timeout); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
           </button></a>
     </div>
@@ -213,10 +218,48 @@ const highlight = codex
 .replaceAll("$discriminator", "<span style='color: #feca29;'>$discriminator</span>")
 
 document.getElementById('codex').innerHTML = highlight;
+  
+function copy(txt){
+const copyText = "hello";
+navigator.clipboard.writeText(copyText.value);
+  setTimeout(function() { opacity(); }, 0);
+}
+
+function opacity() {
+  var x=getComputedStyle(document.getElementById('alert')).getPropertyValue('opacity');
+x=100;
+document.getElementById('alert').style.opacity=x;
+  setTimeout(function() { opacity2(); }, 2000);
+}
+
+function opacity2() {
+  var x=getComputedStyle(document.getElementById('alert')).getPropertyValue('opacity');
+x=0;
+document.getElementById('alert').style.opacity=x;
+}
+
+//copy input
+var timeout = `hi`;
 </script>
 
   
 <style>
+.alert-success {
+    color: #ffffff;
+    opacity: 0%;
+    background-color: var(--color-primary); /*#7DDF7C*/
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius:.5em;
+    margin: 15px;
+    padding:12px;
+    width: 190px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index : 1;
+    transition: opacity 0.5s linear;
+}
+  
   .codex {
     width: 100%;
     height: 100%;
