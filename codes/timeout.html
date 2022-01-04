@@ -178,7 +178,13 @@ $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fai
   
 <script>
 const codex = document.getElementById('codex').innerHTML;
-const highlight = codex.replaceAll("[", "<span style='color: red;'>[</span>").replaceAll("/n", "<br>"); 
+const highlight = codex
+.replaceAll("[", "<span style='color: #4287f5;'>[</span>")
+.replaceAll("]", "<span style='color: #4287f5;'>]</span>")
+.replaceAll("$", "<span style='color: #f676c0;'>$</span>")
+.replaceAll("replaceText", "<span style='color: #47ca6b;'>replaceText</span>")
+.replaceAll("$mentioned", "<span style='color: #e1a365;'>$mentioned</span>")
+
 document.getElementById('codex').innerHTML = highlight;
 </script>
 
@@ -189,7 +195,6 @@ document.getElementById('codex').innerHTML = highlight;
     height: 100%;
     color: white;
     opacity: 80%;
-    word-break: inherit;
     word-wrap: break-word;
     white-space: pre-line
   }
