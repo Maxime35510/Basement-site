@@ -77,7 +77,7 @@
       <hr
         style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
       />
-  <textarea class="codex" cols="100" rows="100" id="codex">
+  <a class="codex" id="codex">
   $nomention
 $c[You can change the configuration below]
    $var[prefix;++] $c[&#x3C;=== the bot prefix, in my case I used &#x22;++&#x22;]
@@ -167,7 +167,7 @@ $timeout[$message[2];$message[1]]
 :x: $var[error] | Please mention someone or type a valid user ID.
            $endif 
 $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
-  </textarea>
+  </a>
     </div>
 
   
@@ -177,7 +177,7 @@ $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fai
   </div> <!--body div-->
   
 <script>
-const codex = document.getElementById('codex').value;
+const codex = document.getElementById('codex').innerHTML;
 const highlight = codex.replaceAll("[", "<span style='color: red;'>[</span>"); 
 document.getElementById('codex').innerHTML = highlight;
 </script>
