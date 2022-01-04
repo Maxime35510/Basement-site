@@ -182,8 +182,18 @@ const highlight = codex
 .replaceAll("[", "<span style='color: #4287f5;'>[</span>")
 .replaceAll("]", "<span style='color: #4287f5;'>]</span>")
 .replaceAll("$", "<span style='color: #f676c0;'>$</span>")
-.replaceAll("replaceText", "<span style='color: #47ca6b;'>replaceText</span>")
-.replaceAll("$mentioned", "<span style='color: #e1a365;'>$mentioned</span>")
+.replaceAll("replaceText", "<span style='color: #29fe50;'>replaceText</span>")
+.replaceAll("onlyIf", "<span style='color: #f729fe;'>onlyIf</span>")
+.replaceAll("checkContains", "<span style='color: #c2fe29;'>checkContains</span>")
+.replaceAll("splitText", "<span style='color: #feca29;'>splitText</span>")
+.replaceAll("@", "<span style='color: #29fee9;'>@</span>")
+.replaceAll("var", "<span style='color: #fec229;'>var</span>")
+.replaceAll("userExists", "<span style='color: #fe298c;'>userExists</span>")
+.replaceAll("authorID", "<span style='color: #29fed7;'>authorID</span>")
+.replaceAll("noMentionMessage", "<span style='color: #29fed7;'>authorID</span>")
+.replaceAll("rolePosition", "<span style='color: #29fed7;'>rolePosition</span>")
+.replaceAll("highestRole", "<span style='color: #29fed7;'>highestRole</span>")
+.replaceAll("checkUserPerms", "<span style='color: #29fed7;'>checkUserPerms</span>")
 
 document.getElementById('codex').innerHTML = highlight;
 </script>
