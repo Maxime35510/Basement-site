@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- Welcome to the Basement Network source code, we hope you find what you're searching. -->
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/attachments/907048857244942336/927633096046706728/rectangle_developers.png"
+    />
+    <title>Basement Developers</title>
+    <!-- fonts we use -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Meta tags we use for SEO and social sharing -->
+    <link rel="canonical" href="./index.html" />
+    <meta
+      name="description"
+      content="Basement Network is creating awesome communities around different social medias, join our website to know more about us."
+    />
+    <meta name="theme-color" content="#894EFF" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Basement Network" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./index.html" />
+    <meta
+      property="og:description"
+      content="Basement Network is the official website of our social group."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/attachments/922197630543618179/922197879840440350/large_basement_network.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/card.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <!-- Import the webpage's javascript file -->
+
+    <script src="https://basement-network.com/js/script.js" defer></script>
+  </head>
+  <body style="background-color: var(--background) !important">
+    <iframe
+      id="l_frame"
+      src="../loader.html"
+      style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:5;"
+      name="l_frame"
+      >Loading page...</iframe
+    >
+    <div id="body" style="opacity:0">
+
+      
+    <div class="card">
+      <a class="badge"
+        ><i class="fa-solid fa-code"></i> BDFD</a
+      >      <a class="badge"
+        ><i class="fa-brands fa-discord"></i> Berk#3506</a
+      >
+      <h1 class="name">Timeout System Code</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+  <textarea class="codex" cols="100" rows="100" id="codex">
+  $nomention
+$c[You can change the configuration below]
+   $var[prefix;++] $c[&#x3C;=== the bot prefix, in my case I used &#x22;++&#x22;]
+   $var[error;Invalid usage! correct usage: $var[prefix]timeout &#x3C;@user&#x3E; &#x3C;time, such as 5m for 5 minutes, or 5d for 5 days&#x3E; &#x3C;reason, optional&#x3E;] $c[&#x3C;== an error msg]
+   $var[error2;Maximal time exceeded, the max time you can put is of 28d (28 days)] $c[&#x3C;== another error msg]
+$c[End configuration]
+
+   $onlyIf[$or[$mentioned[1]!=;$userExists[$message[1]]==true]==true;$var[error]]
+$if[$mentioned[1]==]
+   $onlyIf[$checkContains[$message[2]%;s%;m%;d%;h%;w%]==true;$var[error]]
+$else
+   $textSplit[$replaceText[$replaceText[$replaceText[$replaceText[$message;&#x3C;@$mentioned[1]&#x3E;;-separate-;-1];&#x3C;@!$mentioned[1]&#x3E;;-separate-;-1];$username[$mentioned[1]];-separate-;-1];@$username[$mentioned[1]];-separate-;-1];-separate-]
+   $var[split;$splitText[2]]
+   $textSplit[$replaceText[$var[split]; ;%%;-1];%%]
+   $var[time;$splitText[2]]
+   $onlyIf[$checkContains[$var[time]%;s%;m%;d%;h%;w%]==true;$var[error]]
+   $onlyIf[404==404;https://berk404.glitch.me/tools/free-premium.html]
+$endif
+
+$onlyIf[$or[$checkUserPerms[$authorID;moderatemembers]==true;$checkUserPerms[$authorID;managemessages]==true]==true;You need &#x27;moderate members&#x27; permissions, or &#x27;manage messages&#x27; permissions to do this.]
+$onlyBotPerms[moderatemembers;Sorry, but I need &#x27;moderate members&#x27; permissions to do this.]
+
+           $if[$mentioned[1]!=]
+   $c[Limiters, to keep the code safe]
+$onlyIf[$mentioned[1]!=$authorID;You can&#x27;t timeout yourself!]
+$onlyIf[$rolePosition[$highestRole[$authorID]]&#x3C;$rolePosition[$highestRole[$mentioned[1]]];You can&#x27;t timeout someone who has a higher role than you!]
+$onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%;;1];m%;;1];d%;;1];h%;;1];w%;;1]]==true;$var[error]]
+$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%;;1];m%;;1];d%;;1];h%;;1];w%;;1]&#x3E;0;$var[error]]
+
+   $c[Returns an error if the time exceed the 28 days, in any time form, this is needed because Discord has a limit of 28 days in timeouts that can&#x27;t be passed.]
+$if[$checkContains[$var[time];s]==true] 
+   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;2419200;$var[error2]]
+$endif
+$if[$checkContains[$var[time];m]==true]
+   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;40320;$var[error2]]
+$endif
+$if[$checkContains[$var[time];d]==true] 
+   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;29;$var[error2]]
+$endif
+$if[$checkContains[$var[time];h]==true]
+   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;672;$var[error2]]
+$endif
+$if[$checkContains[$var[time];w]==true]
+   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;5;$var[error2]]
+$endif
+$var[arg;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;1;;-1];2;;-1];3;;-1];4;;-1];5;;-1];6;;-1];7;;-1];8;;-1];9;;-1];0;;-1];s;;-1];m;;-1];h;;-1];d;;-1];w;;-1]]
+  $textSplit[$replaceText[$noMentionMessage;@;;-1]; ]
+$var[reason;$replaceText[$replaceText[$noMentionMessage;@;;-1];$splitText[1];;1]]
+
+    $c[The timeout message]
+&#x2611;&#xFE0F; Successfully applied the timeout of **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%; seconds;1];m%; minutes;1];d%; day(s);1];h%; hour(s);1];w%; week(s);1]** to the user **$username[$mentioned[1]]#$discriminator[$mentioned[1]]**!
+$if[$var[arg]!=]Reason: $var[reason]...$endif
+    $c[The line above checks if there&#x27;s a reason for the timeout, and if there is then it shows it, if not it won&#x27;t show it.]
+    $c[The line below timeouts the user, var time is the amount of time, mentioned 1 is the user ID of the mentioned user]
+$timeout[$var[time];$mentioned[1]]
+           $elseif[$userExists[$message[1]]==true]
+
+$onlyIf[$message[1]!=$authorID;You can&#x27;t timeout yourself!]
+$onlyIf[$rolePosition[$highestRole[$authorID]]&#x3C;$rolePosition[$highestRole[$message[1]]];You can&#x27;t timeout someone who has a higher role than you!]
+$onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%;;1];w%;;1];m%;;1];d%;;1];h%;;1]]==true;$var[error]]
+$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%;;1];w%;;1];m%;;1];d%;;1];h%;;1]&#x3E;0;$var[error]]
+
+    $c[Returns an error if the time exceed the 28 days, in any time form, this is needed because Discord has a limit of 28 days in timeouts that can&#x27;t be passed.]
+$if[$checkContains[$var[time];s]==true]
+    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;2419200;$var[error2]]
+$endif
+$if[$checkContains[$var[time];m]==true]
+    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;40320;$var[error2]]
+$endif
+$if[$checkContains[$var[time];d]==true]
+    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;29;$var[error2]]
+$endif
+$if[$checkContains[$var[time];h]==true]
+    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;672;$var[error2]]
+$endif
+$if[$checkContains[$var[time];w]==true]
+    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;5;$var[error2]]
+$endif
+
+    $c[The timeout message]
+&#x2611;&#xFE0F; Successfully applied the timeout of **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%; seconds;1];m%; minutes;1];d%; day(s);1];h%; hour(s);1];w%; week(s);1]** to the user **$username[$message[1]]#$discriminator[$message[1]]**!
+$if[$message[3]!=]Reason: $replaceText[$replaceText[$replaceText[$replaceText[$message;$message[1];;1];$message[2];;1];$noMentionMessage[3];;1];@;;-1]...$endif
+    $c[The line above checks if there&#x27;s a reason for the timeout, and if there is then it shows it, if not it won&#x27;t show it.]
+    $c[The line below timeouts the user, message 2 is the amount of time, message 1 is the user ID]
+$timeout[$message[2];$message[1]]
+           $else $c[This else is returned if there&#x27;s not a mentioned user or an user ID, and it&#x27;s only returned in rare cases.]
+:x: $var[error] | Please mention someone or type a valid user ID.
+           $endif 
+$suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
+  </textarea>
+    </div>
+
+  
+    </div>
+    <!--end cards-->
+      
+  </div> <!--body div-->
+  
+<style>
+  .codex {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    opacity: 80%;
+  }
+  
+ .about #hover:hover {
+   background-color: var(--primary) !important;
+   color: white !important;
+  }
+  
+  .flex-container {
+  display: flex;
+  width: 60%;
+  margin-left: 5%;
+  margin: auto;
+}
+
+.flex-container > div {
+  background-color: var(--primary);
+  border-radius: 10px;
+  margin: 2%;
+  padding: 30px;
+  width: 50%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+  
+@media (max-width: 600px) {
+.flex-container > div {
+width: 76% !important;
+}
+.flex-container {
+  display: initial !important;
+}  
+}    
+  
+  .about {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  }
+  
+  button {
+      margin-left: 0px !important;
+  }
+</style>
+  
+  </body>
+<!--footer-->
+<footer class="footer-distributed" id="footer" style="opacity:0">
+
+			<div class="footer-right">
+
+				<a href="https://discord.gg/uSn4AdfgN5"><i class="fa-brands fa-discord"></i></a>
+				<a href="../contact.html"><i class="fa-solid fa-envelope"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+
+					<a href="../privacy.html">Policy</a>
+				</p>
+
+				<p>Basement Network &copy; 2021</p>
+			</div>
+
+		</footer>
+<!--end footer-->
+  
+</html>
