@@ -89,101 +89,100 @@
       />
       
 <a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
-      
+<div class="info">
+      <h4>Trigger: (prefix)ticket</h4>
+<h4>Usage: (prefix)timeout {@user/ID} {time, ex: 5m} {reason, optional} </h4>
+</div>
   <a class="codex" id="codex">
-  $c[ENABLE BDSCRIPT 2 OR IT MAY NOT WORK.]
-    $nomention
-$c[You can change the configuration below]
-   $var[prefix;++] $c[&#x3C;=== the bot prefix, in my case I used &#x22;++&#x22;]
-   $var[error;Invalid usage! correct usage: $var[prefix]timeout &#x3C;@user&#x3E; &#x3C;time, such as 5m for 5 minutes, or 5d for 5 days&#x3E; &#x3C;reason, optional&#x3E;] $c[&#x3C;== an error msg]
-   $var[error2;Maximal time exceeded, the max time you can put is of 28d (28 days)] $c[&#x3C;== another error msg]
-$c[End configuration]
-
-   $onlyIf[$or[$mentioned[1]!=;$userExists[$message[1]]==true]==true;$var[error]]
-$if[$mentioned[1]==]
-   $onlyIf[$checkContains[$message[2]%;s%;m%;d%;h%;w%]==true;$var[error]]
-$else
-   $textSplit[$replaceText[$replaceText[$replaceText[$replaceText[$message;&#x3C;@$mentioned[1]&#x3E;;-separate-;-1];&#x3C;@!$mentioned[1]&#x3E;;-separate-;-1];$username[$mentioned[1]];-separate-;-1];@$username[$mentioned[1]];-separate-;-1];-separate-]
-   $var[split;$splitText[2]]
-   $textSplit[$replaceText[$var[split]; ;%%;-1];%%]
-   $var[time;$splitText[2]]
-   $onlyIf[$checkContains[$var[time]%;s%;m%;d%;h%;w%]==true;$var[error]]
-   $onlyIf[404==404;https://berk404.glitch.me/tools/free-premium.html]
+ $nomention
+    $c[Restrictions: Ticket Disabled]
+  $c[If the system is disabled, then the command won&#x27;t work and it will return the error after the &#x22;;&#x22;]
+$onlyIf[$getServerVar[ticketsystem]!=no;Sorry! the ticket system is disabled on this server, tell an admin to type +enable-tickets to enable it!]
+    $c[Restrictions: Permissions]
+  $c[If the bot don&#x27;t have Manage Channels permissions to create the ticket channel, it will return the error after the &#x22;;&#x22;]
+$onlyBotPerms[managechannels;Sorry! I don&#x27;t have enough permissions to create the ticket, tell an admin to give me &#x22;manage channels&#x22; permissions!]
+    $c[Restrictions: Tickets limit]
+  $c[If the user already has a ticket created, then it will return an error]
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$if[$channelExists[$getUserVar[userticket]]==true]
+$if[$checkContains[$channelTopic[$getUserVar[userticket]];Closed &#x26; Saved]==false]
+$onlyIf[2==5;Hey **$username[$authorID]**! you already own a open ticket, please move to &#x3C;#$getUserVar[userticket]&#x3E;] $c[don&#x27;t delete this, it&#x27;s actually important]
 $endif
-
-$onlyIf[$or[$checkUserPerms[$authorID;moderatemembers]==true;$checkUserPerms[$authorID;managemessages]==true]==true;You need &#x27;moderate members&#x27; permissions, or &#x27;manage messages&#x27; permissions to do this.]
-$onlyBotPerms[moderatemembers;Sorry, but I need &#x27;moderate members&#x27; permissions to do this.]
-
-           $if[$mentioned[1]!=]
-   $c[Limiters, to keep the code safe]
-$onlyIf[$mentioned[1]!=$authorID;You can&#x27;t timeout yourself!]
-$onlyIf[$rolePosition[$highestRole[$authorID]]&#x3C;$rolePosition[$highestRole[$mentioned[1]]];You can&#x27;t timeout someone who has a higher role than you!]
-$onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%;;1];m%;;1];d%;;1];h%;;1];w%;;1]]==true;$var[error]]
-$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%;;1];m%;;1];d%;;1];h%;;1];w%;;1]&#x3E;0;$var[error]]
-
-   $c[Returns an error if the time exceed the 28 days, in any time form, this is needed because Discord has a limit of 28 days in timeouts that can&#x27;t be passed.]
-$if[$checkContains[$var[time];s]==true] 
-   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;2419200;$var[error2]]
 $endif
-$if[$checkContains[$var[time];m]==true]
-   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;40320;$var[error2]]
+ 
+    $c[This creates the ticket]
+$async[ticket1]
+  $if[$getServerVar[ticketcategory]==]
+     $createChannel[ticket-00$sum[$getServerVar[tickets];1];text]
+  $else
+     $createChannel[ticket-00$sum[$getServerVar[tickets];1];text;$getServerVar[ticketcategory]]
+  $endif
+$endasync
+ 
+$await[ticket1]
+ 
+    $c[This sends an embed into the ticket]
+$setUserVar[userticket;$channelID[ticket-00$sum[$getServerVar[tickets];1]]]
+$useChannel[$channelID[ticket-00$sum[$getServerVar[tickets];1]]]
+    $c[And the embed is the one below]
+$author[New ticket!]
+$color[ed3491]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$description[
+Hey &#x3C;@$authorID&#x3E;, this is your ticket!
+ 
+Please, state down below your whole problem,
+provide any detail you can so the staff can help you faster. 
+Our staff team will answer soon as possible!
+ 
+Please run &#x60;+close&#x60; when your problem has been solved
+or use the &#x22;close&#x22; red button below.
+ 
+Be patient till a staff check your ticket!
+ 
+&#x1F512; **Close**
+You or the staff can use this button to close the ticket.
+ 
+&#x270B; **Claim**
+The staff can use this button to claim the ticket.
+Who claims the ticket will be the only one able to close it.
+ 
+&#x3E; Ticket subject: $replaceText[$replaceText[%$checkCondition[$message==]%;%true%;&#x60;Not provided&#x60;!;1];%false%;&#x60;$message&#x60;;1]]
+$footer[$username[$botID] ticket system]
+$addTimestamp
+$c[This adds the buttons]
+$addButton[no;closeticket;Close;danger;no;&#x1F512;]
+$addButton[no;claimticket;Claim (staff);secondary;no;&#x270B;]
+ 
+$c[This sends an embed saying that the ticket has been created]
+$sendEmbedMessage[$channelID;;;;**$username[$authorID]#$discriminator[$authorID]** You successfully created the ticket &#x3C;#$channelID[ticket-00$sum[$getServerVar[tickets];1]]&#x3E;!;ed3491;;;$username[$botID] ticket system;;$c[thumbnail];;;no]
+ 
+$c[This changes the ticket description, don&#x27;t touch this, or the code may break]
+ $if[$getServerVar[ticketcategory]!=]
+     $modifyChannel[$channelID[ticket-00$sum[$getServerVar[tickets];1]];!unchanged;Ticket opened by &#x22;$username[$authorID]#$discriminator[$authorID]&#x22;;no;!unchanged]
+  $else
+     $modifyChannel[$channelID[ticket-00$sum[$getServerVar[tickets];1]];!unchanged;Ticket opened by &#x22;$username[$authorID]#$discriminator[$authorID]&#x22;;no;!unchanged;$getServerVar[ticketcategory]]
+  $endif
+ 
+$c[This sets the ticket permissions]
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];-readmessages;$guildID] $c[This deny the permission to view the ticket to everyone]
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];+readmessages;$authorID] $c[This allows the permission to view the ticket to the user that creates the ticket]
+$if[$roleExists[$getServerVar[ticketstaff]]==true] $c[This checks if the staff role has been set... and if it exists then...]
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];+readmessages;$getServerVar[ticketstaff]] $c[This allows the permission to view the ticket to the staff role]
 $endif
-$if[$checkContains[$var[time];d]==true] 
-   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;29;$var[error2]]
-$endif
-$if[$checkContains[$var[time];h]==true]
-   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;672;$var[error2]]
-$endif
-$if[$checkContains[$var[time];w]==true]
-   $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;5;$var[error2]]
-$endif
-$var[arg;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;1;;-1];2;;-1];3;;-1];4;;-1];5;;-1];6;;-1];7;;-1];8;;-1];9;;-1];0;;-1];s;;-1];m;;-1];h;;-1];d;;-1];w;;-1]]
-  $textSplit[$replaceText[$noMentionMessage;@;;-1]; ]
-$var[reason;$replaceText[$replaceText[$noMentionMessage;@;;-1];$splitText[1];;1]]
-
-    $c[The timeout message]
-&#x2611;&#xFE0F; Successfully applied the timeout of **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[time]%;s%; seconds;1];m%; minutes;1];d%; day(s);1];h%; hour(s);1];w%; week(s);1]** to the user **$username[$mentioned[1]]#$discriminator[$mentioned[1]]**!
-$if[$var[arg]!=]Reason: $var[reason]...$endif
-    $c[The line above checks if there&#x27;s a reason for the timeout, and if there is then it shows it, if not it won&#x27;t show it.]
-    $c[The line below timeouts the user, var time is the amount of time, mentioned 1 is the user ID of the mentioned user]
-$timeout[$var[time];$mentioned[1]]
-           $elseif[$userExists[$message[1]]==true]
-
-$onlyIf[$message[1]!=$authorID;You can&#x27;t timeout yourself!]
-$onlyIf[$rolePosition[$highestRole[$authorID]]&#x3C;$rolePosition[$highestRole[$message[1]]];You can&#x27;t timeout someone who has a higher role than you!]
-$onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%;;1];w%;;1];m%;;1];d%;;1];h%;;1]]==true;$var[error]]
-$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%;;1];w%;;1];m%;;1];d%;;1];h%;;1]&#x3E;0;$var[error]]
-
-    $c[Returns an error if the time exceed the 28 days, in any time form, this is needed because Discord has a limit of 28 days in timeouts that can&#x27;t be passed.]
-$if[$checkContains[$var[time];s]==true]
-    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;2419200;$var[error2]]
-$endif
-$if[$checkContains[$var[time];m]==true]
-    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;40320;$var[error2]]
-$endif
-$if[$checkContains[$var[time];d]==true]
-    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;29;$var[error2]]
-$endif
-$if[$checkContains[$var[time];h]==true]
-    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;672;$var[error2]]
-$endif
-$if[$checkContains[$var[time];w]==true]
-    $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];s;;-1];m;;-1];d;;-1];h;;-1];w;;-1]&#x3C;5;$var[error2]]
-$endif
-
-    $c[The timeout message]
-&#x2611;&#xFE0F; Successfully applied the timeout of **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%; seconds;1];m%; minutes;1];d%; day(s);1];h%; hour(s);1];w%; week(s);1]** to the user **$username[$message[1]]#$discriminator[$message[1]]**!
-$if[$message[3]!=]Reason: $replaceText[$replaceText[$replaceText[$replaceText[$message;$message[1];;1];$message[2];;1];$noMentionMessage[3];;1];@;;-1]...$endif
-    $c[The line above checks if there&#x27;s a reason for the timeout, and if there is then it shows it, if not it won&#x27;t show it.]
-    $c[The line below timeouts the user, message 2 is the amount of time, message 1 is the user ID]
-$timeout[$message[2];$message[1]]
-           $else $c[This else is returned if there&#x27;s not a mentioned user or an user ID, and it&#x27;s only returned in rare cases.]
-:x: $var[error] | Please mention someone or type a valid user ID.
-           $endif 
-$suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
-$c[Code from https://dev.basement-network.com - made by Berk#3506]
+ 
+$c[This sets the tickets amount variable, it&#x27;s more important than you think so don&#x27;t delete it :)]
+ 
+$setServerVar[tickets;$sum[$getServerVar[tickets];1]]
   </a>
-          <a onclick="copy(timeout); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+          <a onclick="copy(ticketsystem); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
           </button></a>
     </div>
@@ -256,6 +255,11 @@ var timeout = `hi`;
 
   
 <style>
+  
+  .info {
+    opacity: 80%;
+  }
+  
 .alert-success {
     color: #ffffff;
     opacity: 0%;
