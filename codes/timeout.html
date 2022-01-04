@@ -178,7 +178,7 @@ $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fai
   
 <script>
 const codex = document.getElementById('codex').innerHTML;
-const highlight = codex.replaceAll("[", "<span style='color: red;'>[</span>"); 
+const highlight = codex.replaceAll("[", "<span style='color: red;'>[</span>").replaceAll("/n", "<br>"); 
 document.getElementById('codex').innerHTML = highlight;
 </script>
 
@@ -188,11 +188,10 @@ document.getElementById('codex').innerHTML = highlight;
     width: 100%;
     height: 100%;
     color: white;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    resize: none;
     opacity: 80%;
+    word-break: inherit;
+    word-wrap: break-word;
+    white-space: pre-line
   }
   
  .about #hover:hover {
