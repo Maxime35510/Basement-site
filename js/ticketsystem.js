@@ -416,5 +416,208 @@ $c[Get more exclusive codes at https://dsc.chat/codes]
 
 const ticketsystem3 =
 `
+$c[THE TRIGGER OF THIS COMMAND SHOULD BE **ONLY** YOUR BOT PREFIX, NOTHING MORE!]
+$c[ENABLE BDSCRIPT 2 MODE]
+$c[You can keep the normal BDscript mode on this command]
+$c[This code works as a "+enable-tickets", "+disable-tickets" command, "+set-ticket-category", "+remove-ticket-category" command, a "+remove-staff-role" command and as a "+set-staff-role <role>" command at same time]
+$c[You only can set ONE staff role]
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable "ticketsystem" in the app, with value "no", of course without quote symbols]
+$varExistError[tickets;Please create the variable "tickets" in the app, with value "0", of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable "ticketcategory" in the app, without any value]
+$varExistError[ticketstaff;Please create the variable "ticketstaff" in the app, without any value]
+$varExistError[userticket;Please create the variable "userticket" in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[prefix;+] $c[YOUR BOT PREFIX, IN THIS CASE I USED "+" AS EXAMPLE]
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED "#ed3491" AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$nomention
+$if[%$toLowercase[$message[1]]%==%set-staff-role%]
+$author[Ticket Staff Set]
+$description[The Tickets Staff role has been set! now the role <@&$findRole[$replaceText[$message;$message[1];;1]]> has access to view tickets! to disable this, just do $var[prefix]remove-staff-role]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketstaff;$findRole[$replaceText[$message;$message[1];;1]]]
+$addTimestamp
+$onlyIf[$roleExists[$findRole[$replaceText[$message;$message[1];;1]]]==true;Hey, it looks like i can't find that role, please try using a valid role Mention/ID/Name!]
+$onlyIf[$message[2]!=;Please type a role ID/mention or name to set as ticket staff role!]
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%remove-staff-role%]
+$author[Ticket Staff Set]
+$description[The Tickets Staff role has been removed! you can set a Ticket Staff role with $var[prefix]set-staff-role :)]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketstaff;]
+$addTimestamp
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%set-ticket-category%]
+$suppressErrors[Hey, please add a category ID to set as ticket category! if you don't know how, it's easy, just enable the developer mode in the settings, and then right click (or long tap if you're on mobile) to the category and click/tap "copy ID"]
+$author[Ticket Category Set]
+$description[The Tickets Category has been set! now i'll create the tickets on the <#$findChannel[$channelName[$message[2]]]> category! to disable this, just do $var[prefix]remove-ticket-category]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketcategory;$findChannel[$channelName[$message[2]]]]
+$addTimestamp
+$onlyIf[$findChannel[$channelName[$message[2]]]!=;Please put a valid category ID of this server! if you don't know how, it's easy, just enable the developer mode in the settings, and then right click (or long tap if you're on mobile) to the category and click/tap "copy ID"]
+$onlyIf[$charCount[$message[2]]==18;Please put a valid **category ID**! if you don't know how, it's easy, just enable the developer mode in the settings, and then right click (or long tap if you're on mobile) to the category and click/tap "copy ID"]
+$onlyIf[$isNumber[$message[2]]==true;Please put a valid **category ID**! if you don't know how, it's easy, just enable the developer mode in the settings, and then right click (or long tap if you're on mobile) to the category and click/tap "copy ID"]
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%remove-ticket-category%]
+$author[Ticket Category Removed]
+$description[The Tickets Category has been removed! now i'll create the tickets outside any category! to enable a category, just do $var[prefix]set-ticket-category <category ID>]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketcategory;]
+$addTimestamp
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$suppressErrors
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%enable-tickets%]
+$author[Ticket System Enabled]
+$description[The Tickets on this server are now enabled! people can create tickets with "$var[prefix]ticket", if you want to disable the system just do $var[prefix]disable-tickets
+**Things you can do with this ticket system:**
+$var[prefix]set-staff-role <@role> - to set a role as staff role for tickets
+$var[prefix]remove-staff-role - to remove the staff role
+$var[prefix]set-ticket-category <category ID> - to set a category where the tickets will be created
+$var[prefix]remove-ticket-category - to remove the ticket category
+]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketsystem;yes]
+$addTimestamp
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%disable-tickets%]
+$author[Ticket System Disabled]
+$description[The Tickets on this server are now disabled! people can't create tickets with "$var[prefix]ticket" anymore, if you want to enable the system just do $var[prefix]enable-tickets
+**Things you can do with this ticket system:**
+$var[prefix]set-staff-role <@role> - to set a role as staff role for tickets
+$var[prefix]remove-staff-role - to remove the staff role
+$var[prefix]set-ticket-category <category ID> - to set a category where the tickets will be created
+$var[prefix]remove-ticket-category - to remove the ticket category
+]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketsystem;no]
+$addTimestamp
+$endif
+ 
+$c[a command of Berk#3506 for the channel "Bot Designer For Discord: Guide"]
+$c[If you're going to share the code for the public, don't remove/edit the comment above]
+$c[Get more exclusive codes at https://dsc.chat/codes]
+$suppressErrors
+`;
 
+const ticketsystem4 =
+`
+$nomention
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable "ticketsystem" in the app, with value "no", of course without quote symbols]
+$varExistError[tickets;Please create the variable "tickets" in the app, with value "0", of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable "ticketcategory" in the app, without any value]
+$varExistError[ticketstaff;Please create the variable "ticketstaff" in the app, without any value]
+$varExistError[userticket;Please create the variable "userticket" in the app, without any value]
+ 
+$c[all the embed below is editable, edit it how you want :)]
+$color[ed3491]
+$description[Click the button to open a ticket!]
+$footer[$username[$botID] ticket system]
+$addButton[no;openticket;Click to open;primary;no;✉]
+$onlyPerms[managechannels;**$username** Hey! you need manage channels permissions to setup a ticket channel button!]
+`;
+
+const ticketsystem5 =
+`
+$nomention
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable "ticketsystem" in the app, with value "no", of course without quote symbols]
+$varExistError[tickets;Please create the variable "tickets" in the app, with value "0", of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable "ticketcategory" in the app, without any value]
+$varExistError[ticketstaff;Please create the variable "ticketstaff" in the app, without any value]
+$varExistError[userticket;Please create the variable "userticket" in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED "#ed3491" AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$addButton[no;justclose;Just close;danger;no;🔐]
+$if[$checkContains[$channelTopic;Closed & Saved]==false]
+$addButton[no;closeandsave;Close & Save;primary;no;💾]
+$else
+$addButton[no;closeandsave;Closed & Saved;primary;yes;💾]
+$addButton[no;openagain;Open Ticket;success;no;🔑]
+$endif
+ 
+$author[Are you sure? pick an option]
+$description[
+Hey **$username[$authorID]#$discriminator[$authorID]** do you really want to close the ticket?
+ 
+🔐 **Just close**
+Just close the ticket, without saving any content inside it, this action can't be undone.
+💾 **Close & Save** - staff only
+Close the ticket, but save the channel, it removes the user permissions to view the ticket.
+]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$onlyIf[$checkContains[$channelName[$channelID];ticket-00]==true;Sorry, this isn't a valid ticket.]
+`;
+
+const ticketsystem6 =
+`
+$nomention
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable "ticketsystem" in the app, with value "no", of course without quote symbols]
+$varExistError[tickets;Please create the variable "tickets" in the app, with value "0", of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable "ticketcategory" in the app, without any value]
+$varExistError[ticketstaff;Please create the variable "ticketstaff" in the app, without any value]
+$varExistError[userticket;Please create the variable "userticket" in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED "#ed3491" AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$author[Ticket Panel]
+$color[$var[color]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$description[
+Hey **$username[$authorID]#$discriminator[$authorID]**, please pick an option down below!
+ 
+🔒 **Close** - user & staff
+You can use this button to close the ticket.
+ 
+✋ **Claim** - staff only
+You can use this button to claim the ticket.
+Who claims the ticket will be the only one able to close it.
+]
+$footer[$username[$botID] ticket system]
+$addTimestamp
+$c[This adds the buttons]
+$addButton[no;closeticket;Close;danger;no;🔒]
+$addButton[no;claimticket;Claim;secondary;no;✋]
+$onlyIf[$checkContains[$channelName[$channelID];ticket-00]==true;Sorry, this isn't a valid ticket.]
 `;

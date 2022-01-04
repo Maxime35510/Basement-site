@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="/js/clipboard.js" defer></script>
+    <script src="/js/ticketsystem.js" defer></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
         <script src="https://api.countapi.xyz/hit/dev.basement-network.com-ticketsystem/visits?callback=codeviews" async></script>
   </head>
@@ -182,12 +182,33 @@ $c[This sets the tickets amount variable, it&#x27;s more important than you thin
  
 $setServerVar[tickets;$sum[$getServerVar[tickets];1]]
   </a>
-          <a onclick="copy(ticketsystem); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+          <a onclick="ticket1(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a>
+      
+<div class="info">
+      <h4>Trigger: $onInteraction</h4>
+</div>
+  <a class="codex" id="codex">
+
+  </a>
+          <a onclick="ticket2(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a>
+      
+<div class="info">
+      <h4>Trigger: $onInteraction</h4>
+</div>
+  <a class="codex" id="codex">
+
+  </a>
+          <a onclick="ticket2(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
           </button></a>
     </div>
 
-  
+
+      
     </div>
     <!--end cards-->
       
@@ -231,8 +252,33 @@ const highlight = codex
 
 document.getElementById('codex').innerHTML = highlight;
 
-function copy(txt){
+function ticket1() {
 navigator.clipboard.writeText(ticketsystem);
+  setTimeout(function() { opacity(); }, 0);
+}
+  
+function ticket2() {
+navigator.clipboard.writeText(ticketsystem2);
+  setTimeout(function() { opacity(); }, 0);
+}
+  
+function ticket3() {
+navigator.clipboard.writeText(ticketsystem2);
+  setTimeout(function() { opacity(); }, 0);
+}
+  
+function ticket4() {
+navigator.clipboard.writeText(ticketsystem2);
+  setTimeout(function() { opacity(); }, 0);
+}
+  
+function ticket5() {
+navigator.clipboard.writeText(ticketsystem2);
+  setTimeout(function() { opacity(); }, 0);
+}
+  
+function ticket6() {
+navigator.clipboard.writeText(ticketsystem2);
   setTimeout(function() { opacity(); }, 0);
 }
 
