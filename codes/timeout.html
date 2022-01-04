@@ -78,7 +78,8 @@
         style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
       />
   <a class="codex" id="codex">
-  $nomention
+  $c[ENABLE BDSCRIPT 2 OR IT MAY NOT WORK.]
+    $nomention
 $c[You can change the configuration below]
    $var[prefix;++] $c[&#x3C;=== the bot prefix, in my case I used &#x22;++&#x22;]
    $var[error;Invalid usage! correct usage: $var[prefix]timeout &#x3C;@user&#x3E; &#x3C;time, such as 5m for 5 minutes, or 5d for 5 days&#x3E; &#x3C;reason, optional&#x3E;] $c[&#x3C;== an error msg]
@@ -168,6 +169,9 @@ $timeout[$message[2];$message[1]]
            $endif 
 $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
   </a>
+          <a href="https://dsc.gg/codes"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a>
     </div>
 
   
@@ -181,21 +185,32 @@ const codex = document.getElementById('codex').innerHTML;
 const highlight = codex
 .replaceAll("[", "<span style='color: #4287f5;'>[</span>")
 .replaceAll("]", "<span style='color: #4287f5;'>]</span>")
-.replaceAll("$", "<span style='color: #f676c0;'>$</span>")
-.replaceAll("onlyBotPerms", "<span style='color: #fe29e9;'>onlyBotPerms</span>")
-.replaceAll("replaceText", "<span style='color: #29fe50;'>replaceText</span>")
-.replaceAll("onlyIf", "<span style='color: #f729fe;'>onlyIf</span>")
-.replaceAll("checkContains", "<span style='color: #c2fe29;'>checkContains</span>")
-.replaceAll("splitText", "<span style='color: #feca29;'>splitText</span>")
-.replaceAll("textSplit", "<span style='color: #feca29;'>textSplit</span>")
+.replaceAll("$onlyBotPerms", "<span style='color: #fe29e9;'>$onlyBotPerms</span>")
+.replaceAll("$replaceText", "<span style='color: #29fe50;'>$replaceText</span>")
+.replaceAll("$onlyIf", "<span style='color: #f729fe;'>$onlyIf</span>")
+.replaceAll("$checkContains", "<span style='color: #c2fe29;'>$checkContains</span>")
+.replaceAll("$splitText", "<span style='color: #feca29;'>$splitText</span>")
+.replaceAll("$textSplit", "<span style='color: #feca29;'>$textSplit</span>")
 .replaceAll("@", "<span style='color: #29fee9;'>@</span>")
-.replaceAll("var", "<span style='color: #fec229;'>var</span>")
-.replaceAll("userExists", "<span style='color: #fe298c;'>userExists</span>")
-.replaceAll("authorID", "<span style='color: #29fed7;'>authorID</span>")
-.replaceAll("noMentionMessage", "<span style='color: #29fed7;'>authorID</span>")
-.replaceAll("rolePosition", "<span style='color: #29fed7;'>rolePosition</span>")
-.replaceAll("highestRole", "<span style='color: #29fed7;'>highestRole</span>")
-.replaceAll("checkUserPerms", "<span style='color: #29fed7;'>checkUserPerms</span>")
+.replaceAll("$var", "<span style='color: #fec229;'>$var</span>")
+.replaceAll("$userExists", "<span style='color: #fe298c;'>$userExists</span>")
+.replaceAll("$authorID", "<span style='color: #29fed7;'>$authorID</span>")
+.replaceAll("$noMentionMessage", "<span style='color: #29fed7;'>$noMentionMessage</span>")
+.replaceAll("$rolePosition", "<span style='color: #29fed7;'>$rolePosition</span>")
+.replaceAll("$highestRole", "<span style='color: #29fed7;'>$highestRole</span>")
+.replaceAll("$checkUserPerms", "<span style='color: #29fed7;'>$checkUserPerms</span>")
+.replaceAll("$message", "<span style='color: #4287f5;'>$message</span>")
+.replaceAll("$if", "<span style='color: #fe298c;'>$if</span>")
+.replaceAll("$else", "<span style='color: #fe298c;'>$else</span>")
+.replaceAll("$endif", "<span style='color: #fe298c;'>$endif</span>")
+.replaceAll("$mentioned", "<span style='color: #fe298c;'>$mentioned</span>")
+.replaceAll("$timeout", "<span style='color: #29fed7;'>$timeout</span>")
+.replaceAll("$suppressErrors", "<span style='color: #29fed7;'>$suppressErrors</span>")
+.replaceAll("$or", "<span style='color: #feca29;'>$or</span>")
+.replaceAll("$and", "<span style='color: #feca29;'>$and</span>")
+.replaceAll("$nomention", "<span style='color: #29fee9;'>$nomention</span>")
+.replaceAll("$username", "<span style='color: #feca29;'>$username</span>")
+.replaceAll("$discriminator", "<span style='color: #feca29;'>$discriminator</span>")
 
 document.getElementById('codex').innerHTML = highlight;
 </script>
