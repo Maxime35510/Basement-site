@@ -53,8 +53,9 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-<script src="/js/clipboard.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
+        <script src="https://api.countapi.xyz/hit/dev.basement-network.com-timeout/visits?callback=codeviews" async></script>
   </head>
   <body style="background-color: var(--background) !important">
     <iframe
@@ -79,6 +80,8 @@
         ><i class="fa-solid fa-code-branch"></i> V.1</a
       >  <a class="badge"
         ><i class="fa-brands fa-discord"></i> Berk#3506</a
+      > <a class="badge"
+        ><i class="fa-solid fa-eye"></i> <span id="views">0</span></a
       >
       <h1 class="name">Timeout System Code</h1>
       <hr
@@ -189,6 +192,10 @@ $c[Code from https://dev.basement-network.com - made by Berk#3506]
   </div> <!--body div-->
   
 <script>
+function codeviews(response) {
+    document.getElementById('views').innerText = response.value;
+}
+  
 const codex = document.getElementById('codex').innerHTML;
 const highlight = codex
 .replaceAll("[", "<span style='color: #4287f5;'>[</span>")
