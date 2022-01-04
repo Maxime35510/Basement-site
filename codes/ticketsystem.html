@@ -90,8 +90,8 @@
       
 <a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
 <div class="info">
+<h3>First code (1/6) | BDscript 2 required.</h3>
       <h4>Trigger: (prefix)ticket</h4>
-<h4>Usage: (prefix)timeout {@user/ID} {time, ex: 5m} {reason, optional} </h4>
 </div>
   <a class="codex" id="codex">
  $nomention
@@ -184,25 +184,567 @@ $setServerVar[tickets;$sum[$getServerVar[tickets];1]]
   </a>
           <a onclick="ticket1(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
-          </button></a>
-      
+          </button></a><br>
+<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>    
 <div class="info">
+<h3>Second code (2/6) | BDscript 2 required.</h3>
       <h4>Trigger: $onInteraction</h4>
 </div>
   <a class="codex" id="codex">
-
+$nomention
+$c[IMPORTANT: Enable BDscript 2 mode or it may not work!]
+$c[
+Stuff you need to know:
+- This system won&#x27;t work if your bot don&#x27;t have &#x22;Manage channels&#x22; perms, this is obvious!
+- This code may have a few minor bugs that i wasn&#x27;t able to fix, however these are not dangerous
+- You can&#x27;t save the ticket transcript in a file, that&#x27;s not possible
+- You can&#x27;t make the ticket close automaticly after X amount of time of inactivity
+- Once you click the &#x22;Just close&#x22; button, the ticket will close without any warning or timer, as it&#x27;s a &#x22;confirmation&#x22; button
+- Don&#x27;t edit the code functions, you can edit the content on the embeds but don&#x27;t edit any sensitive function
+]
+$c[
+Variables required:
+&#x22;ticketsystem&#x22; with value: &#x22;no&#x22;
+&#x22;tickets&#x22; with value: &#x22;0&#x22;
+&#x22;ticketcategory&#x22; without value
+&#x22;ticketstaff&#x22; without value
+&#x22;userticket&#x22; without value
+]
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$c[
+This system may be updated again in the future,
+to know about next updates or bug fixes just periodically check out the channel,
+or just subscribe and enable the bell :)
+You can also DM me, Berk#3506 
+]
+$c[ EDITABLE SETTINGS ]
+ 
+$var[prefix;+] $c[YOUR BOT PREFIX, IN THIS CASE I USED &#x22;+&#x22; AS EXAMPLE]
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED &#x22;#ed3491&#x22; AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$if[$customID==closeticket]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$removeComponent[closeticket]
+$removeComponent[claimticket]
+$addButton[no;justclose;Just close;danger;no;&#x1F510;]
+$if[$checkContains[$channelTopic;Closed &#x26; Saved]==false]
+$addButton[no;closeandsave;Close &#x26; Save;primary;no;&#x1F4BE;]
+$else
+$addButton[no;closeandsave;Closed &#x26; Saved;primary;yes;&#x1F4BE;]
+$addButton[no;openagain;Open Ticket;success;no;&#x1F511;]
+$endif
+$addButton[no;justcancel;Cancel;secondary;no;&#x1F516;]
+ 
+$author[Are you sure? pick an option]
+$description[
+Hey **$username[$authorID]#$discriminator[$authorID]** do you really want to close the ticket?
+ 
+&#x1F510; **Just close**
+Just close the ticket, without saving any content inside it, this action can&#x27;t be undone.
+&#x1F4BE; **Close &#x26; Save**
+Close the ticket, but save the channel, it removes the user permissions to view the ticket.
+&#x1F516; **Cancel**
+Don&#x27;t close the ticket.
+]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$endif
+ 
+$if[$customID==justclose]
+ $if[$checkContains[$channelTopic;claimed]==false]
+$deleteChannels[$channelID]
+ $else
+   $if[$checkContains[$channelTopic;claimed by $username[$authorID]#$discriminator[$authorID]]==true]
+     $deleteChannels[$channelID]
+   $else
+     $sendEmbedMessage[$channelID;&#x3C;@$authorID&#x3E;;;;Sorry, but another staff already claimed this ticket, only the staff that claimed the ticket can close it.;$var[color];Action denied;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+   $endif
+  $endif
+$endif
+ 
+$if[$customID==closeandsave]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$if[$getServerVar[ticketstaff]==]
+$onlyPerms[kick;**$username** | Sorry, you need &#x27;kick&#x27; permissions to execute this! or you need the staff role, which isn&#x27;t set (tell an admin to do $var[prefix]set-staff-role &#x3C;role&#x3E;!)]
+$else
+$onlyIf[$hasRole[$authorID;$getServerVar[ticketstaff]]==true;**$username** | Sorry, only the staff can use this button!]
+$endif
+  $if[$checkContains[$channelTopic;claimed]==false]
+      $modifyChannelPerms[$channelID;-readmessages;$findUser[$splitText[2]]]
+      $removeComponent[justcancel]
+      $sendEmbedMessage[$channelID;&#x3C;@$authorID&#x3E;;;;This ticket has been closed &#x26; saved, the user don&#x27;t have access to it anymore! i&#x27;ll save this channel till you use the &#x22;just close&#x22; button.;$var[color];Ticket Closed;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+   $if[$getServerVar[ticketcategory]==]
+$modifyChannel[$channelID;!unchanged;$channelTopic | Ticket Closed &#x26; Saved;no;!unchanged]
+   $else
+$modifyChannel[$channelID;!unchanged;$channelTopic | Ticket Closed &#x26; Saved;no;!unchanged;$getServerVar[ticketcategory]]
+   $endif
+$onlyBotPerms[managechannels;Please give me managechannels permissions, otherwise i can&#x27;t take actions in the ticket.]
+  $editButton[closeandsave;Closed &#x26; Saved;primary;yes;&#x1F4BE;]
+  $addButton[no;openagain;Open Ticket;success;no;&#x1F511;]
+$author[Ticket Solved]
+$description[
+Here are some options that you, the staff, can use.
+ 
+&#x1F510; **Just close**
+Just close the ticket, without saving any content inside it, this action can&#x27;t be undone.
+&#x1F511; **Open Ticket**
+Open the ticket, the user will be able to view the ticket again.
+ 
+&#x3E; **This ticket has been closed &#x26; saved by $username[$authorID]#$discriminator[$authorID]**!]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+  $else
+ $if[$checkContains[$channelTopic;claimed by $username[$authorID]#$discriminator[$authorID]]==true]
+     $modifyChannelPerms[$channelID;-readmessages;$findUser[$splitText[2]]]
+     $sendEmbedMessage[$channelID;&#x3C;@$authorID&#x3E;;;;This ticket has been closed &#x26; saved, the user don&#x27;t have access to it anymore! i&#x27;ll save this channel till you use the &#x22;just close&#x22; button.;$var[color];Ticket Closed;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+   $if[$getServerVar[ticketcategory]==]
+$modifyChannel[$channelID;!unchanged;$channelTopic | Ticket Closed &#x26; Saved;no;!unchanged]
+   $else
+$modifyChannel[$channelID;!unchanged;$channelTopic | Ticket Closed &#x26; Saved;no;!unchanged;$getServerVar[ticketcategory]]
+   $endif
+$onlyBotPerms[managechannels;Please give me managechannels permissions, otherwise i can&#x27;t take actions in the ticket.]
+$editButton[closeandsave;Closed &#x26; Saved;primary;yes;&#x1F4BE;]
+$addButton[no;openagain;Open Ticket;success;no;&#x1F511;]
+$author[Ticket Solved]
+$description[
+Here are some options that you, the staff, can use.
+ 
+&#x1F510; **Just close**
+Just close the ticket, without saving any content inside it, this action can&#x27;t be undone.
+&#x1F511; **Open Ticket**
+Open the ticket, the user will be able to view the ticket again.
+ 
+&#x3E; **This ticket has been closed &#x26; saved by $username[$authorID]#$discriminator[$authorID]**!]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+ $else
+     $sendEmbedMessage[$channelID;&#x3C;@$authorID&#x3E;;;;Sorry, but another staff already claimed this ticket, only the staff that claimed the ticket can close it.;$var[color];Action denied;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+  $endif
+ $endif
+$endif
+ 
+$if[$customID==justcancel]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$author[Ticket Panel]
+$description[
+Please, state down below your whole problem,
+provide any detail you can so the staff can help you faster. 
+Our staff team will answer soon as possible!
+ 
+Please run *$var[prefix]close* when your problem has been solved
+or use the &#x22;close&#x22; red button below.
+ 
+Be patient till a staff check your ticket!
+ 
+&#x1F512; **Close**
+You or the staff can use this button to close the ticket.
+ 
+&#x270B; **Claim**
+The staff can use this button to claim the ticket.
+Who claims the ticket will be the only one able to close it.
+]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$removeComponent[justclose]
+$removeComponent[closeandsave]
+$removeComponent[justcancel]
+$addButton[no;closeticket;Close;danger;no;&#x1F512;]
+$if[$checkContains[$channelTopic;claimed]==false]
+$addButton[no;claimticket;Claim (staff);secondary;no;&#x270B;]
+$else
+$addButton[no;claimticket;Claimed;secondary;yes;&#x270B;]
+$endif
+$endif
+ 
+$if[$customID==claimticket]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$if[$getServerVar[ticketstaff]==]
+$onlyPerms[kick;**$username** | Sorry, you need &#x27;kick&#x27; permissions to execute this! or you need the staff role, which isn&#x27;t set (tell an admin to do $var[prefix]set-staff-role &#x3C;role&#x3E;!)]
+$else
+$onlyIf[$hasRole[$authorID;$getServerVar[ticketstaff]]==true;**$username** | Sorry, only the staff can use this button!]
+$endif
+$author[Ticket Panel]
+$description[
+Please, state down below your whole problem,
+provide any detail you can so the staff can help you faster. 
+Our staff team will answer soon as possible!
+ 
+Please run *$var[prefix]close* when your problem has been solved
+or use the &#x22;close&#x22; red button below.
+ 
+Be patient till a staff check your ticket!
+ 
+&#x1F512; **Close**
+You or the staff can use this button to close the ticket.
+ 
+&#x270B; **Claim**
+The staff can use this button to claim the ticket.
+ 
+&#x3E; **This ticket has been claimed by $username[$authorID]#$discriminator[$authorID]**!]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$editButton[claimticket;Claimed;secondary;yes;&#x270B;]
+$if[$getServerVar[ticketcategory]==]
+$modifyChannel[$channelID;!unchanged;$channelTopic | claimed by $username[$authorID]#$discriminator[$authorID];no;!unchanged]
+$else
+$modifyChannel[$channelID;!unchanged;$channelTopic | claimed by $username[$authorID]#$discriminator[$authorID];no;!unchanged;$getServerVar[ticketcategory]]
+$endif
+$onlyBotPerms[managechannels;Please give me managechannels permissions, otherwise i can&#x27;t take actions in the ticket.]
+$endif
+ 
+$if[$customID==openagain]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$if[$getServerVar[ticketstaff]==]
+$onlyPerms[kick;**$username** | Sorry, you need &#x27;kick&#x27; permissions to execute this! or you need the staff role, which isn&#x27;t set (tell an admin to do $var[prefix]set-staff-role &#x3C;role&#x3E;!)]
+$else
+$onlyIf[$hasRole[$authorID;$getServerVar[ticketstaff]]==true;**$username** | Sorry, only the staff can use this button!]
+$endif
+$author[Ticket Panel]
+$description[
+Please, state down below your whole problem,
+provide any detail you can so the staff can help you faster. 
+Our staff team will answer soon as possible!
+ 
+Please run *$var[prefix]close* when your problem has been solved
+or use the &#x22;close&#x22; red button below.
+ 
+Be patient till a staff check your ticket!
+ 
+&#x1F512; **Close**
+You or the staff can use this button to close the ticket.
+ 
+&#x270B; **Claim**
+The staff can use this button to claim the ticket.
+Who claims the ticket will be the only one able to close it.
+]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$editButton[closeandsave;Close &#x26; Save;primary;no;&#x1F4BE;]
+$removeComponent[openagain]
+$sendEmbedMessage[$channelID;&#x3C;@$authorID&#x3E;;;;This ticket is now open, the user has access to it.;$var[color];Ticket Open;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+$modifyChannelPerms[$channelID;+readmessages;$findUser[$splitText[2]]]
+$modifyChannelPerms[$channelID;-readmessages;$guildID]
+$if[$roleExists[$getServerVar[ticketstaff]]==true]
+$modifyChannelPerms[$channelID;+readmessages;$getServerVar[ticketstaff]]
+$endif
+$endif
+ 
+$textSplit[$channelTopic;&#x22;]
+ 
+$if[$customID==openticket]
+$nomention
+$if[$channelExists[$getUserVar[userticket]]==true]
+$if[$checkContains[$channelTopic[$getUserVar[userticket]];Closed &#x26; Saved]==false]
+$onlyIf[2==5;] $c[don&#x27;t delete this, it&#x27;s actually important]
+$endif
+$endif
+    $c[Restrictions]
+  $c[If the system is disabled]
+$onlyIf[$getServerVar[ticketsystem]!=no;Sorry! the ticket system is disabled on this server, tell an admin to type $var[prefix]enable-tickets to enable it!]
+  $c[If the bot don&#x27;t have Manage Channels permissions to create the ticket channel, it will return the error after the &#x22;;&#x22;]
+$onlyBotPerms[managechannels;Sorry! I don&#x27;t have enough permissions to create the ticket, tell an admin to give me &#x22;manage channels&#x22; permissions!]
+    $c[This creates the ticket]
+$async[ticket1]
+  $if[$getServerVar[ticketcategory]==]
+     $createChannel[ticket-00$sum[$getServerVar[tickets];1];text]
+  $else
+     $createChannel[ticket-00$sum[$getServerVar[tickets];1];text;$getServerVar[ticketcategory]]
+  $endif
+$endasync
+ 
+$await[ticket1]
+ 
+ $if[$getServerVar[ticketcategory]==]
+     $modifyChannel[$channelID[ticket-00$sum[$getServerVar[tickets];1]];!unchanged;Ticket opened by &#x22;$username[$authorID]#$discriminator[$authorID]&#x22;;no;!unchanged]
+  $else
+     $modifyChannel[$channelID[ticket-00$sum[$getServerVar[tickets];1]];!unchanged;Ticket opened by &#x22;$username[$authorID]#$discriminator[$authorID]&#x22;;no;!unchanged;$getServerVar[ticketcategory]]
+  $endif
+ 
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];-readmessages;$guildID] $c[This deny the permission to view the ticket to everyone]
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];+readmessages;$authorID] $c[This allows the permission to view the ticket to the user that creates the ticket]
+$if[$roleExists[$getServerVar[ticketstaff]]==true] $c[This checks if the staff role has been set... and if it exists then...]
+$modifyChannelPerms[$channelID[ticket-00$sum[$getServerVar[tickets];1]];+readmessages;$getServerVar[ticketstaff]] $c[This allows the permission to view the ticket to the staff role]
+$endif
+ 
+$setUserVar[userticket;$channelID[ticket-00$sum[$getServerVar[tickets];1]]]
+$sendEmbedMessage[$channelID[ticket-00$sum[$getServerVar[tickets];1]];&#x3C;@$authorID&#x3E;;;;Hey **$username[$authorID]#$discriminator[$authorID]**, this is your ticket!
+ 
+Please, state down below your whole problem,
+provide any detail you can so the staff can help you faster.
+Our staff team will answer soon as possible!
+ 
+Please run $var[prefix]close when your problem has been solved
+or use the &#x22;close&#x22; red button below.
+ 
+Be patient till a staff check your ticket!
+ 
+&#x1F512; **Close**
+You or the staff can use &#x22;$var[prefix]close&#x22; to close the ticket
+&#x1F4BB; **Panel**
+The staff can open the ticket panel with &#x22;$var[prefix]panel&#x22;;$var[color];New ticket!;;$username[$botID] ticket system;;https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png;;yes;no]
+ 
+ 
+ 
+$setServerVar[tickets;$sum[$getServerVar[tickets];1]]
+$endif
+ 
+$suppressErrors[Hey, you just discovered a bug...
+For the Bot Developer:
+- To know the exact error message just remove this line of code (suppress errors) and execute the stuff again.
+For the Users using the bot:
+- Hey, just let the bot owner know about this issue if you have some way to contact them :)]
+ 
+$c[a command of Berk#3506 for the channel &#x22;Bot Designer For Discord: Guide&#x22;]
+$c[If you&#x27;re going to share the code for the public, don&#x27;t remove/edit the comment above]
+$c[Get more exclusive codes at https://dsc.chat/codes]
   </a>
           <a onclick="ticket2(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
-          </button></a>
-      
+          </button></a><br>
+<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
 <div class="info">
-      <h4>Trigger: $onInteraction</h4>
+<h3>Third code (3/6) | BDscript 2 required.</h3>
+      <h4>Trigger: (prefix, NOTHING MORE, just your bot prefix)</h4>
 </div>
   <a class="codex" id="codex">
+$c[THE TRIGGER OF THIS COMMAND SHOULD BE **ONLY** YOUR BOT PREFIX, NOTHING MORE!]
+$c[ENABLE BDSCRIPT 2 MODE]
+$c[You can keep the normal BDscript mode on this command]
+$c[This code works as a &#x22;+enable-tickets&#x22;, &#x22;+disable-tickets&#x22; command, &#x22;+set-ticket-category&#x22;, &#x22;+remove-ticket-category&#x22; command, a &#x22;+remove-staff-role&#x22; command and as a &#x22;+set-staff-role &#x3C;role&#x3E;&#x22; command at same time]
+$c[You only can set ONE staff role]
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[prefix;+] $c[YOUR BOT PREFIX, IN THIS CASE I USED &#x22;+&#x22; AS EXAMPLE]
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED &#x22;#ed3491&#x22; AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$nomention
+$if[%$toLowercase[$message[1]]%==%set-staff-role%]
+$author[Ticket Staff Set]
+$description[The Tickets Staff role has been set! now the role &#x3C;@&#x26;$findRole[$replaceText[$message;$message[1];;1]]&#x3E; has access to view tickets! to disable this, just do $var[prefix]remove-staff-role]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketstaff;$findRole[$replaceText[$message;$message[1];;1]]]
+$addTimestamp
+$onlyIf[$roleExists[$findRole[$replaceText[$message;$message[1];;1]]]==true;Hey, it looks like i can&#x27;t find that role, please try using a valid role Mention/ID/Name!]
+$onlyIf[$message[2]!=;Please type a role ID/mention or name to set as ticket staff role!]
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%remove-staff-role%]
+$author[Ticket Staff Set]
+$description[The Tickets Staff role has been removed! you can set a Ticket Staff role with $var[prefix]set-staff-role :)]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketstaff;]
+$addTimestamp
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%set-ticket-category%]
+$suppressErrors[Hey, please add a category ID to set as ticket category! if you don&#x27;t know how, it&#x27;s easy, just enable the developer mode in the settings, and then right click (or long tap if you&#x27;re on mobile) to the category and click/tap &#x22;copy ID&#x22;]
+$author[Ticket Category Set]
+$description[The Tickets Category has been set! now i&#x27;ll create the tickets on the &#x3C;#$findChannel[$channelName[$message[2]]]&#x3E; category! to disable this, just do $var[prefix]remove-ticket-category]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketcategory;$findChannel[$channelName[$message[2]]]]
+$addTimestamp
+$onlyIf[$findChannel[$channelName[$message[2]]]!=;Please put a valid category ID of this server! if you don&#x27;t know how, it&#x27;s easy, just enable the developer mode in the settings, and then right click (or long tap if you&#x27;re on mobile) to the category and click/tap &#x22;copy ID&#x22;]
+$onlyIf[$charCount[$message[2]]==18;Please put a valid **category ID**! if you don&#x27;t know how, it&#x27;s easy, just enable the developer mode in the settings, and then right click (or long tap if you&#x27;re on mobile) to the category and click/tap &#x22;copy ID&#x22;]
+$onlyIf[$isNumber[$message[2]]==true;Please put a valid **category ID**! if you don&#x27;t know how, it&#x27;s easy, just enable the developer mode in the settings, and then right click (or long tap if you&#x27;re on mobile) to the category and click/tap &#x22;copy ID&#x22;]
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%remove-ticket-category%]
+$author[Ticket Category Removed]
+$description[The Tickets Category has been removed! now i&#x27;ll create the tickets outside any category! to enable a category, just do $var[prefix]set-ticket-category &#x3C;category ID&#x3E;]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketcategory;]
+$addTimestamp
+$onlyPerms[managechannels;Hey, you need manage channels permissions to do this!]
+$suppressErrors
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%enable-tickets%]
+$author[Ticket System Enabled]
+$description[The Tickets on this server are now enabled! people can create tickets with &#x22;$var[prefix]ticket&#x22;, if you want to disable the system just do $var[prefix]disable-tickets
+**Things you can do with this ticket system:**
+$var[prefix]set-staff-role &#x3C;@role&#x3E; - to set a role as staff role for tickets
+$var[prefix]remove-staff-role - to remove the staff role
+$var[prefix]set-ticket-category &#x3C;category ID&#x3E; - to set a category where the tickets will be created
+$var[prefix]remove-ticket-category - to remove the ticket category
+]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketsystem;yes]
+$addTimestamp
+$endif
+ 
+$if[%$toLowercase[$message[1]]%==%disable-tickets%]
+$author[Ticket System Disabled]
+$description[The Tickets on this server are now disabled! people can&#x27;t create tickets with &#x22;$var[prefix]ticket&#x22; anymore, if you want to enable the system just do $var[prefix]enable-tickets
+**Things you can do with this ticket system:**
+$var[prefix]set-staff-role &#x3C;@role&#x3E; - to set a role as staff role for tickets
+$var[prefix]remove-staff-role - to remove the staff role
+$var[prefix]set-ticket-category &#x3C;category ID&#x3E; - to set a category where the tickets will be created
+$var[prefix]remove-ticket-category - to remove the ticket category
+]
+$footer[$username[$botID] ticket system | executed by $username[$authorID]#$discriminator[$authorID]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$setServerVar[ticketsystem;no]
+$addTimestamp
+$endif
+ 
+$c[a command of Berk#3506 for the channel &#x22;Bot Designer For Discord: Guide&#x22;]
+$c[If you&#x27;re going to share the code for the public, don&#x27;t remove/edit the comment above]
+$c[Get more exclusive codes at https://dsc.chat/codes]
+$suppressErrors
+  </a>
+          <a onclick="ticket3(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a><br>
+<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
+<div class="info">
+<h3>First code (1/6) | BDscript 2 required.</h3>
+      <h4>Trigger: (prefix)ticket</h4>
+</div>
+  <a class="codex" id="codex">
+$nomention
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$c[all the embed below is editable, edit it how you want :)]
+$color[ed3491]
+$description[Click the button to open a ticket!]
+$footer[$username[$botID] ticket system]
+$addButton[no;openticket;Click to open;primary;no;&#x2709;]
+$onlyPerms[managechannels;**$username** Hey! you need manage channels permissions to setup a ticket channel button!]
 
   </a>
-          <a onclick="ticket2(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+          <a onclick="ticket4(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a><br>
+<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
+<div class="info">
+      <h4>Trigger: fifth code</h4>
+</div>
+  <a class="codex" id="codex">
+$nomention
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED &#x22;#ed3491&#x22; AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$addButton[no;justclose;Just close;danger;no;&#x1F510;]
+$if[$checkContains[$channelTopic;Closed &#x26; Saved]==false]
+$addButton[no;closeandsave;Close &#x26; Save;primary;no;&#x1F4BE;]
+$else
+$addButton[no;closeandsave;Closed &#x26; Saved;primary;yes;&#x1F4BE;]
+$addButton[no;openagain;Open Ticket;success;no;&#x1F511;]
+$endif
+ 
+$author[Are you sure? pick an option]
+$description[
+Hey **$username[$authorID]#$discriminator[$authorID]** do you really want to close the ticket?
+ 
+&#x1F510; **Just close**
+Just close the ticket, without saving any content inside it, this action can&#x27;t be undone.
+&#x1F4BE; **Close &#x26; Save** - staff only
+Close the ticket, but save the channel, it removes the user permissions to view the ticket.
+]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$color[$var[color]]
+$footer[$username[$botID] ticket system]
+$onlyIf[$checkContains[$channelName[$channelID];ticket-00]==true;Sorry, this isn&#x27;t a valid ticket.]
+  </a>
+          <a onclick="ticket5(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+            <i class="fa-solid fa-clipboard"></i> Copy 
+          </button></a><br>
+<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
+<div class="info">
+      <h4>Trigger: six code</h4>
+</div>
+  <a class="codex" id="codex">
+$nomention
+ 
+$c[Checkers: variables]
+$varExistError[ticketsystem;Please create the variable &#x22;ticketsystem&#x22; in the app, with value &#x22;no&#x22;, of course without quote symbols]
+$varExistError[tickets;Please create the variable &#x22;tickets&#x22; in the app, with value &#x22;0&#x22;, of course without quote symbols]
+$varExistError[ticketcategory;Please create the variable &#x22;ticketcategory&#x22; in the app, without any value]
+$varExistError[ticketstaff;Please create the variable &#x22;ticketstaff&#x22; in the app, without any value]
+$varExistError[userticket;Please create the variable &#x22;userticket&#x22; in the app, without any value]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$var[color;ed3491] $c[ANY HEXCODE COLOUR, I USED &#x22;#ed3491&#x22; AS EXAMPLE]
+ 
+$c[ EDITABLE SETTINGS ]
+ 
+$author[Ticket Panel]
+$color[$var[color]]
+$thumbnail[https://cdn.discordapp.com/attachments/899671061933740042/899676586691923988/52722-ticket.png]
+$description[
+Hey **$username[$authorID]#$discriminator[$authorID]**, please pick an option down below!
+ 
+&#x1F512; **Close** - user &#x26; staff
+You can use this button to close the ticket.
+ 
+&#x270B; **Claim** - staff only
+You can use this button to claim the ticket.
+Who claims the ticket will be the only one able to close it.
+]
+$footer[$username[$botID] ticket system]
+$addTimestamp
+$c[This adds the buttons]
+$addButton[no;closeticket;Close;danger;no;&#x1F512;]
+$addButton[no;claimticket;Claim;secondary;no;&#x270B;]
+$onlyIf[$checkContains[$channelName[$channelID];ticket-00]==true;Sorry, this isn&#x27;t a valid ticket.]
+  </a>
+          <a onclick="ticket6(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
           </button></a>
     </div>
@@ -263,22 +805,22 @@ navigator.clipboard.writeText(ticketsystem2);
 }
   
 function ticket3() {
-navigator.clipboard.writeText(ticketsystem2);
+navigator.clipboard.writeText(ticketsystem3);
   setTimeout(function() { opacity(); }, 0);
 }
   
 function ticket4() {
-navigator.clipboard.writeText(ticketsystem2);
+navigator.clipboard.writeText(ticketsystem4);
   setTimeout(function() { opacity(); }, 0);
 }
   
 function ticket5() {
-navigator.clipboard.writeText(ticketsystem2);
+navigator.clipboard.writeText(ticketsystem5);
   setTimeout(function() { opacity(); }, 0);
 }
   
 function ticket6() {
-navigator.clipboard.writeText(ticketsystem2);
+navigator.clipboard.writeText(ticketsystem6);
   setTimeout(function() { opacity(); }, 0);
 }
 
