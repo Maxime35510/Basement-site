@@ -9,7 +9,7 @@ $var[error;Invalid usage! correct usage: $var[prefix]timeout <@user> <time, such
 $var[error2;Maximal time exceeded, the max time you can put is of 28d (28 days)] $c[<== another error msg]
 $c[End configuration]
 $onlyIf[$or[$mentioned[1]!=;$userExists[$message[1]]==true]==true;$var[error]]
-$if[$mentioned[1]==]
+$if[$checkContains[$message[1];@;<]==false]
 $onlyIf[$checkContains[$message[2]%;s%;m%;d%;h%;w%]==true;$var[error]]
 $else
 $textSplit[$replaceText[$replaceText[$replaceText[$replaceText[$message;<@$mentioned[1]>;-separate-;-1];<@!$mentioned[1]>;-separate-;-1];$username[$mentioned[1]];-separate-;-1];@$username[$mentioned[1]];-separate-;-1];-separate-]
@@ -21,7 +21,7 @@ $onlyIf[404==404;https://berk404.glitch.me/tools/free-premium.html]
 $endif
 $onlyIf[$or[$checkUserPerms[$authorID;moderatemembers]==true;$checkUserPerms[$authorID;managemessages]==true]==true;You need 'moderate members' permissions, or 'manage messages' permissions to do this.]
 $onlyBotPerms[moderatemembers;Sorry, but I need 'moderate members' permissions to do this.]
-$if[$mentioned[1]!=]
+$if[$and[$mentioned[1]!=;$checkContains[$message[1];@;<]==true]==true]
 $c[Limiters, to keep the code safe]
 $onlyIf[$mentioned[1]!=$authorID;You can't timeout yourself!]
 $onlyIf[$rolePosition[$highestRole[$authorID]]<$rolePosition[$highestRole[$mentioned[1]]];You can't timeout someone who has a higher role than you!]
@@ -75,13 +75,14 @@ $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$messag
 $endif
 $c[The timeout message]
 ☑️ Successfully applied the timeout of **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2]%;s%; seconds;1];m%; minutes;1];d%; day(s);1];h%; hour(s);1];w%; week(s);1]** to the user **$username[$message[1]]#$discriminator[$message[1]]**!
-$if[$message[3]!=]Reason: $replaceText[$replaceText[$replaceText[$replaceText[$message;$message[1];;1];$message[2];;1];$noMentionMessage[3];;1];@;;-1]...$endif
+$if[$message[3]!=]Reason: $replaceText[$replaceText[$replaceText[$message;$message[1];;1];@;;-1];$message[2];;1]...$endif
 $c[The line above checks if there's a reason for the timeout, and if there is then it shows it, if not it won't show it.]
 $c[The line below timeouts the user, message 2 is the amount of time, message 1 is the user ID]
 $timeout[$message[2];$message[1]]
 $else $c[This else is returned if there's not a mentioned user or an user ID, and it's only returned in rare cases.]
 :x: $var[error] | Please mention someone or type a valid user ID.
 $endif
-$suppressErrors[Sorry, you can't timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
+$suppressErrors[Sorry, you can't timeout this user!] $c[In case something fails, this suppressErrors will be returned]
 $c[Code from https://dev.basement-network.com - made by Berk#3506]
+
 `;
