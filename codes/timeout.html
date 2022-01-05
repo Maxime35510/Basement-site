@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="/js/timeout.js" defer></script>
+    <script src="/js/timeoutsystem.js" defer></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
         <script src="https://api.countapi.xyz/hit/dev.basement-network.com-timeout/visits?callback=codeviews" async></script>
   </head>
@@ -92,7 +92,7 @@
         style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
       />
       
-<a target=”_blank” href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
+<a target="_blank" href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 850px; max-width: 90%; margin-top: 2%;"></a><br>
 <div class="info">
       <h4>Trigger: (prefix)timeout</h4>
 <h4>Usage: (prefix)timeout {@user/ID} {time, ex: 5m} {reason, optional} </h4>
@@ -190,7 +190,7 @@ $timeout[$message[2];$message[1]]
 $suppressErrors[Sorry, you can&#x27;t timeout this user!] $c[In case someone fails, this suppressErrors will be returned]
 $c[Code from https://dev.basement-network.com - made by Berk#3506]
   </a>
-          <a onclick="copy(timeout); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
+          <a onclick="timeoutsystem(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
             <i class="fa-solid fa-clipboard"></i> Copy 
           </button></a>
     </div>
@@ -198,8 +198,7 @@ $c[Code from https://dev.basement-network.com - made by Berk#3506]
   
     </div>
     <!--end cards-->
-      
-  </div> <!--body div-->
+      <!--body div-->
   
 <script>
 function codeviews(response) {
@@ -239,8 +238,8 @@ const highlight = codex
 
 document.getElementById('codex').innerHTML = highlight;
 
-function copy(txt){
-navigator.clipboard.writeText(code);
+function timeoutsystem() {
+navigator.clipboard.writeText(timeout);
   setTimeout(function() { opacity(); }, 0);
 }
 

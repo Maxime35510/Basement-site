@@ -1,5 +1,5 @@
 //timeout code
-const code =
+const timeout =
 `
 $c[ENABLE BDSCRIPT 2 OR IT MAY NOT WORK.]
 $nomention
