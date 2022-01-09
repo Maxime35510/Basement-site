@@ -54,7 +54,8 @@
     <link rel="stylesheet" href="/css/footers.css" />
     <!-- Import the webpage's javascript file -->
     <script src="https://api.countapi.xyz/get/dev.basement-network.com-timeout/visits?callback=timeoutviews" async></script>
-<script src="https://api.countapi.xyz/get/dev.basement-network.com-ticketsystem/visits?callback=ticketviews" async></script>
+    <script src="https://api.countapi.xyz/get/dev.basement-network.com-ticketsystem/visits?callback=ticketviews" async></script>
+    <script src="https://api.countapi.xyz/get/dev.basement-network.com-giveaways/visits?callback=giveawayviews" async></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
   </head>
   <body>
@@ -110,6 +111,35 @@
 <a target="_blank" href="https://www.ultimateleveling.ga/"><img id="ad" src="https://i.imgur.com/LzzgRZa.png" style="width: 700px; max-width: 90%; border-radius: 10px; margin-top: 2%;"></a><br>
   
 </div>
+    <div class="card">
+      <a class="badge"
+        ><i class="fa-solid fa-code"></i> BDFD</a
+      > <a class="badge"
+        ><i class="fa-solid fa-eye"></i> <span id="giveawayviews">0</span></a
+      ><br><br><a class="badge"
+        ><i class="fa-brands fa-discord"></i> Berk#3506</a
+      > <a class="badge"
+        ><i class="fa-brands fa-discord"></i> GWali#1115</a
+      ><br><br><a class="badge"
+        ><i class="fa-brands fa-discord"></i> Natasquare#9698</a
+      >
+      <h1 class="name">Giveaway System</h1>
+      <hr
+        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
+      />
+      <a
+        >The best Bot Designer For Discord's Giveaway System...</a
+      ><br />
+      <a>The system will pick a winner from these who press the button.</a
+      ><br />
+      <a href="/codes/giveaway.html"><button
+        class="cbtn btn-1"
+        style="border-color: var(--primary); color: var(--primary);"
+      >
+        Get code
+        </button></a>
+    </div>
+      
     <div class="card">
       <a class="badge"
         ><i class="fa-solid fa-code"></i> BDFD</a
@@ -170,6 +200,9 @@ function timeoutviews(response) {
 }  
 function ticketviews(response) {
     document.getElementById('ticketviews').innerText = response.value;
+}  
+function giveawayviews(response) {
+    document.getElementById('giveawayviews').innerText = response.value;
 }  
 </script>
   
