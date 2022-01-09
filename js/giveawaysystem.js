@@ -1,166 +1,20 @@
-<!DOCTYPE html>
-<!-- Welcome to the Basement Network source code, we hope you find what you're searching. -->
-<html lang="en">
-  <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-    -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="https://cdn.discordapp.com/attachments/907048857244942336/927633096046706728/rectangle_developers.png"
-    />
-    <title>Basement Developers</title>
-    <!-- fonts we use -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Meta tags we use for SEO and social sharing -->
-    <link rel="canonical" href="./index.html" />
-    <meta
-      name="description"
-      content="Are you a Developer? our site is for you! the official site for the Basement Developers Discord server, with amazing tools and codes, get Bot Designer For Discord codes, Aoi.js, Discord.js codes and Discord.py codes."
-    />
-    <meta name="theme-color" content="#016bf6" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Basement Developers" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="./index.html" />
-    <meta
-      property="og:description"
-      content="Are you a Developer? our site is for you! the official site for the Basement Developers Discord server, with amazing tools and codes."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.discordapp.com/attachments/922197630543618179/922197879840440350/large_basement_network.png"
-    />
-    <meta name="twitter:card" content="summary" />
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/card.css" />
-    <link rel="stylesheet" href="/css/footers.css" />
-    <!-- Import the webpage's javascript file -->
-    <script src="/js/giveawaysystem.js" defer></script>
-    <script src="https://basement-network.com/js/script.js" defer></script>
-        <script src="https://api.countapi.xyz/hit/dev.basement-network.com-giveaway/visits?callback=codeviews" async></script>
-  </head>
-  <body style="background-color: var(--background) !important">
-    <iframe
-      id="l_frame"
-      src="../loader.html"
-      style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:5;"
-      name="l_frame"
-      >Loading page...</iframe
-    >
-    
-<div class="alert-success" id="alert">
-<i class="fa fa-check-circle" aria-hidden="true"></i>
-  Successfully copied
-</div>
-    
-    <div id="body" style="opacity:0">
-      
-<a href="../index.html" style="margin-top: 1%; margin-left: 1%;"><button class="cbtn btn-2" style="border-color: white; color: white;">
-<i class="fa-solid fa-house"></i> Home 
-</button></a>
-      
-    <div class="card">
-      <a class="badge"
-        ><i class="fa-solid fa-code"></i> BDFD</a
-      > <a class="badge"
-        ><i class="fa-solid fa-code-branch"></i> V.3</a
-      > <a class="badge"
-        ><i class="fa-solid fa-eye"></i> <span id="views">0</span></a
-      ><br><br><a class="badge"
-        ><i class="fa-brands fa-discord"></i> Berk#3506</a
-      > <a class="badge"
-        ><i class="fa-brands fa-discord"></i> GWali#1115</a
-      ><br><br><a class="badge"
-        ><i class="fa-brands fa-discord"></i> Natasquare#9698</a
-      >
-      <h1 class="name">Giveaway System Codes</h1>
-      <hr
-        style="width:200px;text-align:left;margin-left:0;border-top: 1px solid var(--primary);"
-      />
-      
-<a target="_blank" href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>
-
-<div class="variables">
-<h3>Variables required</h3>
-<b>gw_amount</b>
-value=0
-<b>gw_joins</b>
-value=
-<b>gw_joins2</b>
-value=
-<b>gw_joins3</b>
-value=
-<b>gw_joins4</b>
-value=
-<b>gw_joins5</b>
-value=
-<b>gw_joins6</b>
-value=
-<b>gw_joins7</b>
-value=
-<b>gw_joins8</b>
-value=
-<b>gw_joins9</b>
-value=
-<b>gw_joins10</b>
-value=
-<b>gw_joins11</b>
-value=
-<b>gw_joins12</b>
-value=
-<b>gw_joiners</b>
-value=0
-<b>gw_req</b>
-value=
-</div>
-<style>
-  .variables {
-  white-space: pre-line;
-  color: white;
-  opacity: 80%;
-  }
-  .badge {
-    font-size: 11px !important;
-  }
-</style>
-<div class="info">
-<h3>First code (1/2) | BDscript 2 required.</h3>
-      <h4>Trigger: (prefix)start (or anything you want)</h4>
-</div>
-  <a class="codex" id="codex">
+const giveawaysystem = 
+`
 $nomention
 $c[config below]
 $var[color;367fff]
-$var[prefix;io?] $c[&#x3C;== replace &#x22;(Your bot prefix here)&#x22; with your bot prefix]
+$var[prefix;io?] $c[<== replace "(Your bot prefix here)" with your bot prefix]
 $var[perms;ManageServer] $c[The permission the user needs to create a giveaway]
 $c[config above]
  
-$c[DON&#x27;T FORGET TO ENABLE BDSCRIPT 2]
+$c[DON'T FORGET TO ENABLE BDSCRIPT 2]
 $c[Code made by Berk#3506 | Submitted at https://dsc.chat/codes - the biggest BDFD codes sharing server.]
 $onlyIf[$guildID!=;This command only works on servers.]
-$onlyBotPerms[embedlinks;&#x1F4A5; Hey, it seems i don&#x27;t have permissions to attach embeds (EMBED_LINKS)]
-$onlyIf[$or[$checkUserPerms[$authorID;$var[perms]]==true;$hasRole[$authorID;$roleID[giveaways]]==true;$hasRole[$authorID;$roleID[Giveaways]]==true]==true;&#x1F4A5; You must have the $var[perms] permission, or a role called &#x22;Giveaways&#x22;, to use this command!]
-$onlyIf[$message[1]!=;Invalid format! usage: $var[prefix]start &#x3C;time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional&#x3E; {prize, needed} &#x3C;role requirement (mention), optional&#x3E;]
+$onlyBotPerms[embedlinks;💥 Hey, it seems i don't have permissions to attach embeds (EMBED_LINKS)]
+$onlyIf[$or[$checkUserPerms[$authorID;$var[perms]]==true;$hasRole[$authorID;$roleID[giveaways]]==true;$hasRole[$authorID;$roleID[Giveaways]]==true]==true;💥 You must have the $var[perms] permission, or a role called "Giveaways", to use this command!]
+$onlyIf[$message[1]!=;Invalid format! usage: $var[prefix]start <time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional> {prize, needed} <role requirement (mention), optional>]
 $if[$and[$checkContains[$message[1];m;s;h]==true;$isNumber[$replaceText[$replaceText[$replaceText[$message[1];m;;1];s;;1];h;;1]]==true]==true]
-$onlyIf[$replaceText[$noMentionMessage;$message[1];;1]!=;Invalid format! usage: $var[prefix]start &#x3C;time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional&#x3E; {prize, needed} &#x3C;role requirement (mention), optional&#x3E;]
+$onlyIf[$replaceText[$noMentionMessage;$message[1];;1]!=;Invalid format! usage: $var[prefix]start <time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional> {prize, needed} <role requirement (mention), optional>]
 $if[$checkContains[$message[1];s]$checkContains[$message[1];m]$checkContains[$message[1];h]==truefalsefalse]
 $var[time;$sum[$getTimestamp;$replaceText[$replaceText[$message[1];m;;1];s;;1]]]
 $else
@@ -171,10 +25,10 @@ $var[time;$sum[$getTimestamp;$multi[$replaceText[$replaceText[$message[1];m;;1];
 $endif
 $endif
  
-$var[msgid;$sendEmbedMessage[$channelID;;$replaceText[$replaceText[$message;$message[1];;1];&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;;1];;**Hosted By:** &#x3C;@$authorID&#x3E; 
-**N&#xBA; Winners:** 1
-**Role required:** $replaceText[&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;&#x3C;@&#x26;&#x3E;;None;1]
-**Ends** &#x3C;t:$var[time]:R&#x3E;;$var[color];&#x1F389; GIVEAWAY &#x1F389;;;Giveaway N&#xBA;$sum[$getServerVar[gw_amount];1];;$serverIcon[$guildID];;yes;yes]]
+$var[msgid;$sendEmbedMessage[$channelID;;$replaceText[$replaceText[$message;$message[1];;1];<@&$findRole[$mentionedRoles[1]]>;;1];;**Hosted By:** <@$authorID> 
+**Nº Winners:** 1
+**Role required:** $replaceText[<@&$findRole[$mentionedRoles[1]]>;<@&>;None;1]
+**Ends** <t:$var[time]:R>;$var[color];🎉 GIVEAWAY 🎉;;Giveaway Nº$sum[$getServerVar[gw_amount];1];;$serverIcon[$guildID];;yes;yes]]
  
 $setServerVar[gw_amount;$sum[$getServerVar[gw_amount];1]]
 $setServerVar[gw_req;$findRole[$mentionedRoles[1]];$var[msgid]]
@@ -186,23 +40,23 @@ $endif
 $if[$isSlash==true]
 $ephemeral
 $title[Successfully started!]
-$embeddedURL[https://discord.com/oauth2/authorize?client_id=$botID&#x26;scope=bot%20applications.commands&#x26;permissions=$randomText[8;274878286912]]
-$description[;Successfully started your giveaway of **$replaceText[$replaceText[$message;$message[1];;1];&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;;-1]** in the channel &#x3C;#$channelID&#x3E;]
+$embeddedURL[https://discord.com/oauth2/authorize?client_id=$botID&scope=bot%20applications.commands&permissions=$randomText[8;274878286912]]
+$description[;Successfully started your giveaway of **$replaceText[$replaceText[$message;$message[1];;1];<@&$findRole[$mentionedRoles[1]]>;;-1]** in the channel <#$channelID>]
 $color[$var[color]]
 $footer[Powered by $username[$botID]]
 $else
 $endif
  
-$addButton[no;gw_join$var[msgid];&#x1F38A; Join &#x1F38A;;success;no;;$var[msgid]]
+$addButton[no;gw_join$var[msgid];🎊 Join 🎊;success;no;;$var[msgid]]
 $addButton[no;gw_end$var[msgid];End (Host);primary;no;;$var[msgid]]
  
 $else
-$onlyIf[$noMentionMessage!=;Invalid format! usage: $var[prefix]start &#x3C;time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional&#x3E; {prize, needed} &#x3C;role requirement (mention), optional&#x3E; (you&#x27;re forgetting the prize)]
+$onlyIf[$noMentionMessage!=;Invalid format! usage: $var[prefix]start <time in **s**econds/**m**inutes/**h**ours, example: **40m**, optional> {prize, needed} <role requirement (mention), optional> (you're forgetting the prize)]
  
-$var[msgid;$sendEmbedMessage[$channelID;;$replaceText[$message;&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;;-1];;**Hosted By:** &#x3C;@$authorID&#x3E; 
-**N&#xBA; Winners:** 1
-**Role required:** $replaceText[&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;&#x3C;@&#x26;&#x3E;;None;1]
-**Ends** undefinied!;$var[color];&#x1F389; GIVEAWAY &#x1F389;;;Giveaway N&#xBA;$sum[$getServerVar[gw_amount];1];;$serverIcon[$guildID];;yes;yes]]
+$var[msgid;$sendEmbedMessage[$channelID;;$replaceText[$message;<@&$findRole[$mentionedRoles[1]]>;;-1];;**Hosted By:** <@$authorID> 
+**Nº Winners:** 1
+**Role required:** $replaceText[<@&$findRole[$mentionedRoles[1]]>;<@&>;None;1]
+**Ends** undefinied!;$var[color];🎉 GIVEAWAY 🎉;;Giveaway Nº$sum[$getServerVar[gw_amount];1];;$serverIcon[$guildID];;yes;yes]]
  
 $setServerVar[gw_amount;$sum[$getServerVar[gw_amount];1]]
 $setServerVar[gw_req;$findRole[$mentionedRoles[1]];$var[msgid]]
@@ -214,194 +68,187 @@ $endif
 $if[$isSlash==true]
 $ephemeral
 $title[Successfully started!]
-$embeddedURL[https://discord.com/oauth2/authorize?client_id=$botID&#x26;scope=bot%20applications.commands&#x26;permissions=$randomText[8;274878286912]]
-$description[Successfully started your giveaway of **$replaceText[$message;&#x3C;@&#x26;$findRole[$mentionedRoles[1]]&#x3E;;;-1]** in the channel &#x3C;#$channelID&#x3E;]
+$embeddedURL[https://discord.com/oauth2/authorize?client_id=$botID&scope=bot%20applications.commands&permissions=$randomText[8;274878286912]]
+$description[Successfully started your giveaway of **$replaceText[$message;<@&$findRole[$mentionedRoles[1]]>;;-1]** in the channel <#$channelID>]
 $color[$var[color]]
 $footer[Powered by $username[$botID]]
 $else
 $endif
  
-$addButton[no;gw_join$var[msgid];&#x1F38A; Join &#x1F38A;;success;no;;$var[msgid]]
+$addButton[no;gw_join$var[msgid];🎊 Join 🎊;success;no;;$var[msgid]]
 $addButton[no;gw_end$var[msgid];End (Host);primary;no;;$var[msgid]]
 $endif 
 $c[GIVEAWAY SYSTEM made by Berk#3506, the full style was customized by GWali#1115, the text split function provided by Natasquare#9698]
-  </a>
-          <a onclick="giveaway1(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
-            <i class="fa-solid fa-clipboard"></i> Copy 
-          </button></a><br>
-<a target="_blank" href="https://basement-network.com/contact.html"><img id="ad" src="https://cdn.discordapp.com/attachments/910907563686625300/927935793706713168/basement_advertising_banner.png" style="width: 800px; max-width: 90%; margin-top: 2%;"></a><br>    
-<div class="info">
-<h3>Second code (2/2) | BDscript 2 required.</h3>
-      <h4>Trigger: $onInteraction</h4>
-</div>
-  <a class="codex">
+`;
+const giveawaysystem2 = 
+`
 $c[configuration]
-$var[perms;manageserver] $c[The permission needed to end a giveaway, default is &#x22;admin&#x22; as you can see in the function, you can edit it with a valid permission, you can find the BDFD available permissions here: https://nilpointer-software.github.io/bdfd-wiki/resources/permissions.html]
+$var[perms;ManageServer] $c[The permission needed to end a giveaway, default is "admin" as you can see in the function, you can edit it with a valid permission, you can find the BDFD available permissions here: https://nilpointer-software.github.io/bdfd-wiki/resources/permissions.html]
  
-$c[DON&#x27;T FORGET TO ENABLE BDSCRIPT 2]
+$c[DON'T FORGET TO ENABLE BDSCRIPT 2]
 $nomention
 $if[$checkContains[$customID;gw_join]==true]
 $if[$roleExists[$getServerVar[gw_req;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]]==true]
 $if[$hasRole[$authorID;$getServerVar[gw_req;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]]==false]
 $ephemeral $removeButtons
-Your giveaway entry was **denied**, as you not have the &#x3C;@&#x26;$getServerVar[gw_req;$replaceText[$customID;gw_join;;-1]]&#x3E; role
+Your giveaway entry was **denied**, as you not have the <@&$getServerVar[gw_req;$replaceText[$customID;gw_join;;-1]]> role
 $else
-$if[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$if[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $ephemeral $removeButtons
-You&#x27;ve successfully joined this giveaway, now it has **$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];1]** participants!
+You've successfully joined this giveaway, now it has **$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];1]** participants!
 $else
 $ephemeral $removeButtons
-You&#x27;ve already joined this giveaway, it has **$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]** participants.
+You've already joined this giveaway, it has **$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]** participants.
 $endif
 $endif
  
-$if[$charCount[$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$if[$charCount[$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins;$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]] 
 $endif
-$elseif[$charCount[$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins2;$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins3;$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins4;$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins5;$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins6;$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins7;$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins8;$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins9;$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins10;$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins11;$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins12;$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3E;480]
+$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]>480]
 $ephemeral $removeButtons
-Hey, it seems like the limit of participants for giveaway has been reached, so you can&#x27;t join this giveaway.
+Hey, it seems like the limit of participants for giveaway has been reached, so you can't join this giveaway.
 $endif
 $endif
 $else
-$if[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$if[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $ephemeral $removeButtons
-You&#x27;ve successfully joined this giveaway, now it has **$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];1]** participants!
+You've successfully joined this giveaway, now it has **$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];1]** participants!
 $else
 $ephemeral $removeButtons
-You&#x27;ve already joined this giveaway, it has **$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]** participants.
+You've already joined this giveaway, it has **$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]** participants.
 $endif
 $endif
  
-$if[$charCount[$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$if[$charCount[$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins;$getServerVar[gw_joins;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]] 
 $endif
-$elseif[$charCount[$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins2;$getServerVar[gw_joins2;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins3;$getServerVar[gw_joins3;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins4;$getServerVar[gw_joins4;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins5;$getServerVar[gw_joins5;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins6;$getServerVar[gw_joins6;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins7;$getServerVar[gw_joins7;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins8;$getServerVar[gw_joins8;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins9;$getServerVar[gw_joins9;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins10;$getServerVar[gw_joins10;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins11;$getServerVar[gw_joins11;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3C;480]
+$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]<480]
 $if[$checkContains[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];$authorID]==false]
 $setServerVar[gw_joins12;$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]-$authorID;$replaceText[$customID;gw_join;;-1]]
 $setServerVar[gw_joiners;$sum[$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]];1];$replaceText[$replaceText[$customID;gw_join;;-1];gw_end;;-1]]
 $endif
-$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]&#x3E;480]
+$elseif[$charCount[$getServerVar[gw_joins12;$replaceText[$customID;gw_join;;-1]]]>480]
 $ephemeral $removeButtons
-Hey, it seems like the limit of participants for giveaway has been reached, so you can&#x27;t join this giveaway.
+Hey, it seems like the limit of participants for giveaway has been reached, so you can't join this giveaway.
 $endif
 $endif
 $endif
 $if[$checkContains[$customID;gw_end]==true]
 $textSplit[$getServerVar[gw_joins;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins2;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins3;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins4;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins5;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins6;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins7;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins8;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins9;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins10;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins11;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]$getServerVar[gw_joins12;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]];-]
 $nomention
-$if[$getTextSplitLength&#x3E;2]
+$if[$getTextSplitLength>2]
 $if[$or[$checkUserPerms[$authorID;$var[perms]]==true;$hasRole[$authorID;$roleID[giveaways]]==true;$hasRole[$authorID;$roleID[Giveaways]]==true]==true]
 $if[$splitText[$random[2;$sum[$getTextSplitLength;1]]]!=] 
 $if[$isUserDMEnabled[$splitText[$random[2;$sum[$getTextSplitLength;1]]]]==true]
@@ -414,23 +261,23 @@ https://discord.com/channels/$guildID/$channelID/$messageID;no]
 $suppressErrors
 $endasync
 $endif
-$addButton[no;https://discord.com/channels/$guildID/$channelID/$messageID; &#x3164;;link;no;;$sendMessage[:tada: The user &#x3C;@$splitText[$random[2;$sum[$getTextSplitLength;1]]]&#x3E; won the giveaway of **$getEmbedData[$channelID;$messageID;1;title]**, congrats! :tada:;yes]]
+$addButton[no;https://discord.com/channels/$guildID/$channelID/$messageID; ㅤ;link;no;;$sendMessage[:tada: The user <@$splitText[$random[2;$sum[$getTextSplitLength;1]]]> won the giveaway of **$getEmbedData[$channelID;$messageID;1;title]**, congrats! :tada:;yes]]
 $if[$isUserDMEnabled[$splitText[$random[2;$sum[$getTextSplitLength;1]]]]==true]
 $await[gw_end_winner]
 $endif
 $c[embed]
 $thumbnail[$serverIcon]
-$author[&#x1F389; GIVEAWAY (ENDED) &#x1F389;]
+$author[🎉 GIVEAWAY (ENDED) 🎉]
 $title[$getEmbedData[$channelID;$messageID;1;title]]
-$description[**Hosted By:** &#x3C;@$authorID&#x3E;
-**Winner:** &#x3C;@$splitText[$random[2;$sum[$getTextSplitLength;1]]]&#x3E; 
+$description[**Hosted By:** <@$authorID>
+**Winner:** <@$splitText[$random[2;$sum[$getTextSplitLength;1]]]> 
  
 **$getServerVar[gw_joiners;$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1]]** Users had joined this giveaway.]
 $footer[$getEmbedData[$channelID;$messageID;1;footer]]
 $color[57F287]
 $addTimestamp
 $c[embed final]
-$editButton[gw_join$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1];&#x1F38A; Join &#x1F38A;;danger;yes;]
+$editButton[gw_join$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1];🎊 Join 🎊;danger;yes;]
 $editButton[gw_end$replaceText[$replaceText[$customID;gw_end;;-1];gw_join;;-1];Reroll (Host);primary;no;]
 $else
 $ephemeral $removeButtons
@@ -438,7 +285,7 @@ Are you sure you want to end this giveaway of **$getEmbedData[$channelID;$messag
 $endif
 $else
 $ephemeral $removeButtons
-&#x1F4A5; You must have the $var[perms] permission, or a role called &#x22;Giveaways&#x22;, to use this command!
+💥 You must have the $var[perms] permission, or a role called "Giveaways", to use this command!
 $endif
 $else
 $ephemeral $removeButtons
@@ -447,199 +294,4 @@ $endif
 $endif
 $suppressErrors
 $c[GIVEAWAY SYSTEM made by Berk#3506, the full style was customized by GWali#1115, the text split function provided by Natasquare#9698]
-  </a>
-          <a onclick="giveaway2(); return false;"><button class="cbtn btn-1" style="border-color: white; color: white;">
-            <i class="fa-solid fa-clipboard"></i> Copy 
-          </button></a><br>
-    </div>
-
-
-      
-    </div>
-    <!--end cards-->
-        
-<script>
-function codeviews(response) {
-    document.getElementById('views').innerText = response.value;
-}
-  
-const codex = document.getElementById('codex').innerHTML;
-const highlight = codex
-.replaceAll("[", "<span style='color: #4287f5;'>[</span>")
-.replaceAll("]", "<span style='color: #4287f5;'>]</span>")
-.replaceAll("$onlyBotPerms", "<span style='color: #fe29e9;'>$onlyBotPerms</span>")
-.replaceAll("$replaceText", "<span style='color: #29fe50;'>$replaceText</span>")
-.replaceAll("$onlyIf", "<span style='color: #f729fe;'>$onlyIf</span>")
-.replaceAll("$checkContains", "<span style='color: #c2fe29;'>$checkContains</span>")
-.replaceAll("$splitText", "<span style='color: #feca29;'>$splitText</span>")
-.replaceAll("$textSplit", "<span style='color: #feca29;'>$textSplit</span>")
-.replaceAll("@", "<span style='color: #29fee9;'>@</span>")
-.replaceAll("$var", "<span style='color: #fec229;'>$var</span>")
-.replaceAll("$userExists", "<span style='color: #fe298c;'>$userExists</span>")
-.replaceAll("$authorID", "<span style='color: #29fed7;'>$authorID</span>")
-.replaceAll("$noMentionMessage", "<span style='color: #29fed7;'>$noMentionMessage</span>")
-.replaceAll("$rolePosition", "<span style='color: #29fed7;'>$rolePosition</span>")
-.replaceAll("$highestRole", "<span style='color: #29fed7;'>$highestRole</span>")
-.replaceAll("$checkUserPerms", "<span style='color: #29fed7;'>$checkUserPerms</span>")
-.replaceAll("$message", "<span style='color: #4287f5;'>$message</span>")
-.replaceAll("$if", "<span style='color: #fe298c;'>$if</span>")
-.replaceAll("$else", "<span style='color: #fe298c;'>$else</span>")
-.replaceAll("$endif", "<span style='color: #fe298c;'>$endif</span>")
-.replaceAll("$mentioned", "<span style='color: #fe298c;'>$mentioned</span>")
-.replaceAll("$timeout", "<span style='color: #29fed7;'>$timeout</span>")
-.replaceAll("$suppressErrors", "<span style='color: #29fed7;'>$suppressErrors</span>")
-.replaceAll("$or", "<span style='color: #feca29;'>$or</span>")
-.replaceAll("$and", "<span style='color: #feca29;'>$and</span>")
-.replaceAll("$nomention", "<span style='color: #29fee9;'>$nomention</span>")
-.replaceAll("$username", "<span style='color: #feca29;'>$username</span>")
-.replaceAll("$discriminator", "<span style='color: #feca29;'>$discriminator</span>")
-
-document.getElementById('codex').innerHTML = highlight;
-
-function giveaway1() {
-navigator.clipboard.writeText(giveawaysystem);
-  setTimeout(function() { opacity(); }, 0);
-}
-  
-function giveaway2() {
-navigator.clipboard.writeText(giveawaysystem2);
-  setTimeout(function() { opacity(); }, 0);
-}
-
-function opacity() {
-  var x=getComputedStyle(document.getElementById('alert')).getPropertyValue('opacity');
-x=100;
-document.getElementById('alert').style.opacity=x;
-  setTimeout(function() { opacity2(); }, 2000);
-}
-
-function opacity2() {
-  var x=getComputedStyle(document.getElementById('alert')).getPropertyValue('opacity');
-x=0;
-document.getElementById('alert').style.opacity=x;
-}
-</script>
-
-  
-<style>
-  
-  .info {
-    opacity: 80%;
-  }
-  
-.alert-success {
-    color: #ffffff;
-    opacity: 0%;
-    background-color: var(--primary); 
-    font-family: 'Source Sans Pro', sans-serif;
-    border-radius:.5em;
-    margin: 15px;
-    padding:12px;
-    width: 190px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index : 1;
-    transition: opacity 0.5s linear;
-}
-  
-  .codex {
-    width: 100%;
-    height: 100%;
-    color: white;
-    opacity: 80%;
-    word-wrap: break-word;
-    white-space: pre-line
-  }
-  
- .about #hover:hover {
-   background-color: var(--primary) !important;
-   color: white !important;
-  }
-  
-  .flex-container {
-  display: flex;
-  width: 60%;
-  margin-left: 5%;
-  margin: auto;
-}
-
-.flex-container > div {
-  background-color: var(--primary);
-  border-radius: 10px;
-  margin: 2%;
-  padding: 30px;
-  width: 50%;
-  color: white;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-  
-@media (max-width: 600px) {
-.flex-container > div {
-width: 76% !important;
-}
-.flex-container {
-  display: initial !important;
-}  
-}    
-  
-  .about {
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  }
-  
-  button {
-      margin-left: 0px !important;
-  }
-</style>
-  
-  </body>
-<!--footer-->
-<footer class="footer-distributed" id="footer" style="opacity:0">
-
-			<div class="footer-right">
-
-				<a href="https://discord.gg/uSn4AdfgN5"><i class="fa-brands fa-discord"></i></a>
-				<a href="https://basement-network.com/contact.html"><i class="fa-solid fa-envelope"></i></a>
-				<a href="https://www.paypal.me/basementnetwork"><i class="fa-brands fa-paypal"></i></a>
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-
-			</div>
-
-			<div class="footer-left">
-
-				<p class="footer-links">
-					<a class="link-1" href="https://basement-network.com">Network</a>
-					<a href="https://basement-network.com/privacy.html">Privacy Policy</a>
-          <a href="https://dev.basement-network.com/legal/adpolicy.html">Ads Policy</a>
-				</p>
-
-				<p>Basement Network &copy; 2022</p>
-			</div>
-
-		</footer>
-<!--end footer-->
-  
-</html>
+`;
