@@ -53,175 +53,227 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/footers.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="https://api.countapi.xyz/get/dev.basement-network.com-timeout/visits?callback=timeoutviews" async></script>
-    <script src="https://api.countapi.xyz/get/dev.basement-network.com-ticketsystem/visits?callback=ticketviews" async></script>
-    <script src="https://api.countapi.xyz/get/dev.basement-network.com-giveaways/visits?callback=giveawayviews" async></script>
+    <script
+      src="https://api.countapi.xyz/get/dev.basement-network.com-timeout/visits?callback=timeoutviews"
+      async
+    ></script>
+    <script
+      src="https://api.countapi.xyz/get/dev.basement-network.com-ticketsystem/visits?callback=ticketviews"
+      async
+    ></script>
+    <script
+      src="https://api.countapi.xyz/get/dev.basement-network.com-giveaways/visits?callback=giveawayviews"
+      async
+    ></script>
     <script src="https://basement-network.com/js/script.js" defer></script>
   </head>
   <body>
     <iframe
       id="l_frame"
       src="loader.html"
-      style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:5;"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: 5;
+      "
       name="l_frame"
       >Loading page...</iframe
     >
-    <div id="body" style="opacity:0">
-    <div class="body">
-      <!--
+    <div id="body" style="opacity: 0">
+      <div class="body">
+        <!--
       This is the body of the page
       Each element is defined using tags, with < and > indicating where each one opens and closes
       There are elements for sections of the page, images, text, and more
       The elements include attributes referenced in the CSS for the page style
     -->
-      <!-- The wrapper and content divs set margins and positioning -->
-      <div class="wrapper">
-        <div class="content" role="main">
-          <!-- This is the start of content for our page -->
-          <h1>
-            <a
-              style="color: white;"
-              id="title"
-              class="typewrite"
-              data-period="2000"
-              data-type='[ "Basement Developers.", "We build it.", "We make it better.", "We make it real." ]'
-            ></a>
-          </h1>
-        </div>
-        <a style="color: white" class="center"
-          >Basement Developers is a Discord community of Developers around the world.</a
-        >
-        <div class="content">
-          <a href="#coming_soon"><button class="cbtn btn-1" style="border-color: white; color: white;">
-            <i class="fa-solid fa-screwdriver-wrench"></i> Tools
-          </button></a>
-          <a href="https://dsc.gg/codes"><button class="cbtn btn-1" style="border-color: white; color: white;">
-            <i class="fa-brands fa-discord"></i> Server
-          </button></a>
+        <!-- The wrapper and content divs set margins and positioning -->
+        <div class="wrapper">
+          <div class="content" role="main">
+            <!-- This is the start of content for our page -->
+            <h1>
+              <a
+                style="color: white"
+                id="title"
+                class="typewrite"
+                data-period="2000"
+                data-type='[ "Basement Developers.", "We build it.", "We make it better.", "We make it real." ]'
+              ></a>
+            </h1>
+          </div>
+          <a style="color: white" class="center"
+            >Basement Developers is a Discord community of Developers around the
+            world.</a
+          >
+          <div class="content">
+            <a href="#coming_soon"
+              ><button
+                class="cbtn btn-1"
+                style="border-color: white; color: white"
+              >
+                <i class="fa-solid fa-screwdriver-wrench"></i> Tools
+              </button></a
+            >
+            <a href="https://dsc.gg/codes"
+              ><button
+                class="cbtn btn-1"
+                style="border-color: white; color: white"
+              >
+                <i class="fa-brands fa-discord"></i> Server
+              </button></a
+            >
+          </div>
         </div>
       </div>
-    </div>
-    <!--down below, you can see the cards-->
-  
-<div class="card" style="color: white; white-space: pre-line;">
-<h2 class="title" style="margin: 0px;">Who are we?</h2>
-<a>Basement Developers is a Discord server, its purpose is to connect developers around the world.
-We help newcomers and advanced users with their codes, generally helping them in their way to improve their Discord Bot.
-Our community is a safe and healthy place, thanks to our Moderation team, and the awesome members of the community.</a>
-<h3 style="margin:0px; margin-top: 3%;">Current events</h3>
-<a style="margin-top: 0px;">Code of the week (COTW) event! in COTW, we reward creativity, originality and of course, a nice code!
-What are you waiting for? just participate now, add #cotw in any of the codes you share in our server, and win!</a>
-<br>
-<img src="https://cdn.discordapp.com/attachments/907048857244942336/932053621082832906/cotw.png" style="border-radius: 10px; width: 50%; max-width: 70%;">
-<h2>Our website</h2><a>In our website, we have several tools and a codes tab where you can get codes directly from our community.
-Each code is verified by our staff team, they are completely safe!</a>
-<br>
-<img src="https://cdn.discordapp.com/attachments/907048857244942336/928116703500587038/basement_developers_website_banner.png" style="border-radius: 10px; width: 50%; max-width: 70%;">
+      <!--down below, you can see the cards-->
 
-</div>
-    <!--end cards-->
-  
-<script>
-function timeoutviews(response) {
-    document.getElementById('timeoutviews').innerText = response.value;
-}  
-function ticketviews(response) {
-    document.getElementById('ticketviews').innerText = response.value;
-}  
-function giveawayviews(response) {
-    document.getElementById('giveawayviews').innerText = response.value;
-}  
-</script>
-  
-<style>
- .about #hover:hover {
-   background-color: var(--primary) !important;
-   color: white !important;
-  }
-  
-  .flex-container {
-  display: flex;
-  width: 60%;
-  margin-left: 5%;
-  margin: auto;
-}
+      <div class="card" style="color: white; white-space: pre-line">
+        <h2 class="title" style="margin: 0px">Who are we?</h2>
+        <a
+          >Basement Developers is a Discord server, its purpose is to connect
+          developers around the world. We help newcomers and advanced users with
+          their codes, generally helping them in their way to improve their
+          Discord Bot. Our community is a safe and healthy place, thanks to our
+          Moderation team, and the awesome members of the community.</a
+        >
+        <h3 style="margin: 0px; margin-top: 3%">Current events</h3>
+        <a style="margin-top: 0px"
+          >Code of the week (COTW) event! in COTW, we reward creativity,
+          originality and of course, a nice code! What are you waiting for? just
+          participate now, add #cotw in any of the codes you share in our
+          server, and win!</a
+        >
+        <br />
+        <img
+          src="https://cdn.discordapp.com/attachments/907048857244942336/932053621082832906/cotw.png"
+          style="border-radius: 10px; width: 50%; max-width: 70%"
+        />
+        <h2>Our website</h2>
+        <a
+          >In our website, we have several tools and a codes tab where you can
+          get codes directly from our community. Each code is verified by our
+          staff team, they are completely safe!</a
+        >
+        <br />
+        <img
+          src="https://cdn.discordapp.com/attachments/907048857244942336/928116703500587038/basement_developers_website_banner.png"
+          style="border-radius: 10px; width: 50%; max-width: 70%"
+        />
+      </div>
+      <!--end cards-->
 
-.flex-container > div {
-  background-color: var(--primary);
-  border-radius: 10px;
-  margin: 2%;
-  padding: 30px;
-  width: 50%;
-  color: white;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-  
-@media (max-width: 600px) {
-.flex-container > div {
-width: 76% !important;
-}
-.flex-container {
-  display: initial !important;
-}  
-}    
-  
-  .about {
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
+      <script>
+        function timeoutviews(response) {
+          document.getElementById("timeoutviews").innerText = response.value;
+        }
+        function ticketviews(response) {
+          document.getElementById("ticketviews").innerText = response.value;
+        }
+        function giveawayviews(response) {
+          document.getElementById("giveawayviews").innerText = response.value;
+        }
+      </script>
+
+      <style>
+        .about #hover:hover {
+          background-color: var(--primary) !important;
+          color: white !important;
+        }
+
+        .flex-container {
+          display: flex;
+          width: 60%;
+          margin-left: 5%;
+          margin: auto;
+        }
+
+        .flex-container > div {
+          background-color: var(--primary);
+          border-radius: 10px;
+          margin: 2%;
+          padding: 30px;
+          width: 50%;
+          color: white;
           align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
+          text-align: center;
           justify-content: center;
-  }
-  
-  button {
-      margin-left: 0px !important;
-  }
-</style>
-  
+        }
+
+        @media (max-width: 600px) {
+          .flex-container > div {
+            width: 76% !important;
+          }
+          .flex-container {
+            display: initial !important;
+          }
+        }
+
+        .about {
+          height: 100%;
+          padding: 2rem;
+          text-align: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-flex-flow: column nowrap;
+          -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+
+        button {
+          margin-left: 0px !important;
+        }
+      </style>
+    </div>
   </body>
-<!--footer-->
-<footer class="footer-distributed" id="footer" style="opacity:0">
+  <!--footer-->
+  <footer class="footer-distributed" id="footer" style="opacity: 0">
+    <div class="footer-right">
+      <a href="https://discord.gg/uSn4AdfgN5"
+        ><i class="fa-brands fa-discord"></i
+      ></a>
+      <a href="https://basement-network.com/contact.html"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+      <a href="https://www.paypal.me/basementnetwork"
+        ><i class="fa-brands fa-paypal"></i
+      ></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
 
-			<div class="footer-right">
+    <div class="footer-left">
+      <p class="footer-links">
+        <a class="link-1" href="https://basement-network.com">Network</a>
+        <a href="https://basement-network.com/privacy.html">Privacy Policy</a>
+        <a href="https://dev.basement-network.com/legal/adpolicy.html"
+          >Ads Policy</a
+        >
+      </p>
 
-				<a href="https://discord.gg/uSn4AdfgN5"><i class="fa-brands fa-discord"></i></a>
-				<a href="https://basement-network.com/contact.html"><i class="fa-solid fa-envelope"></i></a>
-				<a href="https://www.paypal.me/basementnetwork"><i class="fa-brands fa-paypal"></i></a>
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-
-			</div>
-
-			<div class="footer-left">
-
-				<p class="footer-links">
-					<a class="link-1" href="https://basement-network.com">Network</a>
-					<a href="https://basement-network.com/privacy.html">Privacy Policy</a>
-          <a href="https://dev.basement-network.com/legal/adpolicy.html">Ads Policy</a>
-				</p>
-
-				<p>Basement Network &copy; 2022</p>
-			</div>
-
-		</footer>
-<!--end footer-->
-  
+      <p>Basement Network &copy; 2022</p>
+    </div>
+  </footer>
+  <!--end footer-->
 </html>
